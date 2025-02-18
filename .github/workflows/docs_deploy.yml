@@ -26,7 +26,7 @@ jobs:
       - name: Deploy to cPanel
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.CPANEL_SERVER }}  # will be like ftp.antarikchya.org.np
+          server: ${{ secrets.CPANEL_SERVER }}  # will be something like ftp.antarikchya.org.np
           username: ${{ secrets.CPANEL_USERNAME }}
           password: ${{ secrets.CPANEL_PASSWORD }}
           local-dir: ./.vitepress/dist/
