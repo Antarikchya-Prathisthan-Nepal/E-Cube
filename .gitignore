@@ -1,0 +1,40 @@
+
+## Node Dependency directory
+## Commenting this out is preferred by some people, see
+## https://docs.npmjs.com/misc/faq#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+# Book build output
+_book
+
+#log folder
+logs
+
+# Vuepress build output
+.vuepress/dist
+
+# eBook build output
+*.epub
+*.mobi
+
+#backup files
+*.bak
+
+#Sublime Projects
+*.sublime-project
+*.sublime-workspace
+
+#Yarn log
+yarn-error.log
+
+# vitepress - user guide
+node_modules/
+#docs/.vitepress/cache/
+#docs/.vitepress/dist/
+.vitepress/cache/
+.vitepress/dist/
+.vitepress/.temp/
+
+
+# Generated alternative _summary.md
+# **/*/_summary.md

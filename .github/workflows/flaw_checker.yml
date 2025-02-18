@@ -1,0 +1,122 @@
+name: Check for flaws
+# So far:
+  # Modifications of translations files
+  # Broken internal links
+    
+on:
+  pull_request_target:
+    types: [opened, edited, synchronize]
+
+jobs:
+  check_flaws:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+        
+      - name: Create logs directory
+        run: |
+          mkdir logs
+  
+      - name: Get changed english files
+        id: get_changed_markdown_english
+        uses: tj-actions/changed-files@v35.9.2
+        with:
+          json: true
+          base_sha: "${{ github.event.pull_request.base.sha }}"
+          sha: "${{ github.event.pull_request.head.sha }}"          
+          # Below are used to output files to a directory. May use in flaw checker.
+          # write_output_files: true
+          # output_dir: "./logs"
+          files: |
+            en/**/*.md
+          
+      - name: Save JSON file containg files to link check 
+        run: |
+          echo "${{ steps.get_changed_markdown_english.outputs.all_changed_files }}"
+          echo "${{ steps.get_changed_markdown_english.outputs.all_changed_files }}" > ./logs/prFiles.json
+          
+      - name: Run link checker
+        id: link-check
+        run: |
+          npm -g install markdown_link_checker_sc@0.0.134
+          markdown_link_checker_sc -r ${{ github.workspace }} -d en -f ./logs/prFiles.json -i assets -u docs.px4.io/main/ > ./logs/errorsFilteredByPrPages.md
+          mkdir -p ./pr
+          cp ./logs/errorsFilteredByPrPages.md ./pr/errorsFilteredByPrPages.md
+          
+      - name: Read errorsFilteredByPrPages.md file
+        id: read-errors-by-page
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./logs/errorsFilteredByPrPages.md
+
+      - name: Echo Errors by Page
+        run: echo "${{ steps.read-errors-by-page.outputs.content }}"
+ 
+      #- name: Find Comment
+      #  uses: peter-evans/find-comment@v2
+      #  id: fc
+      #  with:
+      #    issue-number: ${{ github.event.pull_request.number }}
+      #    comment-author: 'github-actions[bot]'
+      #    body-includes: Found flaws
+
+      #- name: Create or update comment
+      #  uses: peter-evans/create-or-update-comment@v3
+      #  with:
+      #    comment-id: ${{ steps.fc.outputs.comment-id }}
+      #    issue-number: ${{ github.event.pull_request.number }}
+      #    body: |
+      #      Found flaws
+      #      ${{ steps.read-errors-by-page.outputs.content }}
+      #    edit-mode: replace
+          
+      - name: Save PR number
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+        run: |
+          #mkdir -p ./pr
+          echo $PR_NUMBER > ./pr/pr_number
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pr_number
+          path: pr/
+          
+      #- name: Try build merge checkout code
+      #  uses: actions/checkout@v3
+      #  with:
+      #    ref: ${{ github.event.pull_request.head.ref }}
+
+      #- name: Base SHA test
+      #  id: deleteme
+      #  run: |
+      #    echo "sha=$(git rev-parse origin/main)"
+      #    echo "headsha=${{ github.event.pull_request.head.sha }}"          
+      #    echo "basesha=${{ github.event.pull_request.base.sha }}"
+      #    echo "Workflow: ${{ env.GITHUB_WORKFLOW }}"
+      #    echo "Action: ${{ env.GITHUB_ACTION }}"
+      #    echo "Actor: ${{ env.GITHUB_ACTOR }}"
+      #    echo "Repository: ${{ env.GITHUB_REPOSITORY }}"
+      #    echo "Event Name: ${{ env.GITHUB_EVENT_NAME }}"
+      #    echo "Event Path: ${{ env.GITHUB_EVENT_PATH }}"
+      #    echo "GITHUB_BASE_REF: ${{ env.GITHUB_BASE_REF }}"
+      #    echo "GITHUB_HEAD_REF	: ${{ env.GITHUB_HEAD_REF }}"
+      #    echo "GITHUB_REF	: ${{ env.GITHUB_REF }}"
+      #    echo "GITHUB_SHA	: ${{ env.GITHUB_SHA }}"
+      #    echo "github.event.number	: ${{ github.event.number }}"    
+      #    echo "github.event.pull_request.number	: ${{ github.event.pull_request.number }}"     
+      #    echo "github.event.pull_request.base.ref	: ${{ github.event.pull_request.base.ref }}"  	  
+    
+      #- name: Archive production artifacts
+      #  uses: actions/upload-artifact@v4
+      #  with:
+      #    name: dist-without-markdown
+      #    path: |
+      #      logs
