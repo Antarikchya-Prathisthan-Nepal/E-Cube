@@ -41,28 +41,46 @@ The LED blink code consists of a setup and loop function, which control the blin
 
 ### Code Breakdown
 
-- **`#define LED_PIN 2`**: 
-  - This line defines a constant named `LED_PIN` with a value of **2**, which corresponds to GPIO2. 
-  - Using a defined constant makes the code easier to read and maintain.
+```cpp
+#define LED_PIN 2
+```
+This line defines a constant named `LED_PIN` with a value of **2**, which corresponds to GPIO2.<br><br>
+Using a defined constant makes the code easier to read and maintain.<br><br>
 
-- **`void setup()`**: 
-  - This function is executed once when the program starts and is used for initialization.
-  - **`pinMode(LED_PIN, OUTPUT);`**: 
-    - This command sets GPIO2 as an output pin, allowing it to send voltage to an external component (in this case, the LED).
+```cpp
+void setup() {
+```
+This function is executed once when the program starts and is used for initialization.<br><br>
 
-- **`void loop()`**: 
-  - This function runs continuously after the `setup()` function. It contains the main logic for blinking the LED.
-  - **`digitalWrite(LED_PIN, HIGH);`**: 
-    - This command turns the LED on by setting the `LED_PIN` (GPIO2) to HIGH, supplying voltage to the LED.
-  
-  - **`delay(1000);`**: 
-    - This function pauses the program for **1000 milliseconds** (1 second), keeping the LED on during this time.
-  
-  - **`digitalWrite(LED_PIN, LOW);`**: 
-    - This command turns the LED off by setting the `LED_PIN` to LOW, cutting off the voltage supply.
-  
-  - **`delay(1000);`**: 
-    - This function pauses the program for another **1000 milliseconds** (1 second), keeping the LED off before the loop repeats.
+```cpp
+pinMode(LED_PIN, OUTPUT);
+```
+This command sets GPIO2 as an output pin, allowing it to send voltage to an external component (in this case, the LED).<br><br>
+
+```cpp
+void loop() {
+```
+This function runs continuously after the `setup()` function. It contains the main logic for blinking the LED.<br><br>
+
+```cpp
+digitalWrite(LED_PIN, HIGH);
+```
+This command turns the LED on by setting the `LED_PIN` (GPIO2) to HIGH, supplying voltage to the LED.<br><br>
+
+```cpp
+delay(1000);
+```
+This function pauses the program for **1000 milliseconds** (1 second), keeping the LED on during this time.<br><br>
+
+```cpp
+digitalWrite(LED_PIN, LOW);
+```
+This command turns the LED off by setting the `LED_PIN` to LOW, cutting off the voltage supply.<br><br>
+
+```cpp
+delay(1000);
+```
+This function pauses the program for another **1000 milliseconds** (1 second), keeping the LED off before the loop repeats.<br><br>
 
 <br>
 <hr>

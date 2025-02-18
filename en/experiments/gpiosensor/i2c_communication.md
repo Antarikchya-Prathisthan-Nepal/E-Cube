@@ -108,54 +108,93 @@ void loop() {
 ```
 #### Code Breakdown
 
-- **`#include <Wire.h>`**:
-  - This line includes the Wire library, which provides functions for I2C communication. It allows your ESP32 to communicate with I2C devices.
+```cpp
+#include <Wire.h>
+```
+  - This line includes the Wire library, which provides functions for I2C communication. It allows your ESP32 to communicate with I2C devices. <br><br>
 
-- **`void setup()`**:
-  - This function is executed once when the program starts, used for initialization.
-  - **`Wire.begin();`**:
-    - Initializes the I2C bus. This sets up the ESP32 to communicate over I2C, preparing it to detect devices connected to the bus.
+```cpp
+void setup()
+```
+  - This function is executed once when the program starts, used for initialization. <br><br>
+```cpp
+Wire.begin();
+```
+Initializes the I2C bus. This sets up the ESP32 to communicate over I2C, preparing it to detect devices connected to the bus.<br><br>
+```cpp
+Wire.begin();
+```
+Initializes the I2C bus. This sets up the ESP32 to communicate over I2C, preparing it to detect devices connected to the bus.<br><br>
 
-- **`void loop()`**:
-  - This function runs continuously after the setup function, containing the main logic for checking connected devices.
-  - **`Serial.begin(115200);`**:
-    - Initializes serial communication at a baud rate of **115200** bits per second. This allows the ESP32 to send data to the Serial Monitor for display.
-  
-  - **`Serial.println("Scanning...");`**:
-    - Prints the message "Scanning..." to the Serial Monitor, indicating the start of the scanning process.
+```cpp
+void loop() {
+```
+This function runs continuously after the setup function, containing the main logic for checking connected devices.<br><br>
 
-  - **`int nDevices = 0;`**:
-    - Initializes a counter variable to keep track of the number of detected devices.
+```cpp
+Serial.begin(115200);
+```
+Initializes serial communication at a baud rate of **115200** bits per second. This allows the ESP32 to send data to the Serial Monitor for display.<br><br>
 
-  - **`for (byte address = 1; address < 127; address++)`**:
-    - This loop iterates through possible I2C addresses from **1** to **126**, checking each address for a connected device.
+```cpp
+Serial.println("Scanning...");
+```
+Prints the message "Scanning..." to the Serial Monitor, indicating the start of the scanning process.<br><br>
 
-  - **`Wire.beginTransmission(address);`**:
-    - Begins communication with the device at the current address. This function prepares the ESP32 to send data to the specified address.
+```cpp
+int nDevices = 0;
+```
+Initializes a counter variable to keep track of the number of detected devices.<br><br>
 
-  - **`if (Wire.endTransmission() == 0)`**:
-    - Ends the transmission and checks if the device acknowledged the request (returns **0** if acknowledged). If the device is present, it increments the counter.
+```cpp
+for (byte address = 1; address < 127; address++) {
+```
+This loop iterates through possible I2C addresses from **1** to **126**, checking each address for a connected device.<br><br>
 
-  - **`Serial.print("I2C device found at address 0x");`**:
-    - Prints the message indicating that a device has been found at the specified address, followed by the address in hexadecimal format.
+```cpp
+Wire.beginTransmission(address);
+```
+Begins communication with the device at the current address. This function prepares the ESP32 to send data to the specified address.<br><br>
 
-  - **`Serial.print(address, HEX);`**:
-    - Converts the address to hexadecimal format and prints it to the Serial Monitor.
+```cpp
+if (Wire.endTransmission() == 0) {
+```
+Ends the transmission and checks if the device acknowledged the request (returns **0** if acknowledged). If the device is present, it increments the counter.<br><br>
 
-  - **`Serial.println();`**:
-    - Prints a newline character, moving the cursor to the next line on the Serial Monitor for better readability.
+```cpp
+Serial.print("I2C device found at address 0x");
+```
+Prints the message indicating that a device has been found at the specified address, followed by the address in hexadecimal format.<br><br>
 
-  - **`nDevices++;`**:
-    - Increments the device counter by one for each detected device.
+```cpp
+Serial.print(address, HEX);
+```
+Converts the address to hexadecimal format and prints it to the Serial Monitor.<br><br>
 
-  - **`if (nDevices == 0)`**:
-    - After checking all addresses, it checks if no devices were found. If true, it prints a message indicating that no devices were detected.
+```cpp
+Serial.println();
+```
+Prints a newline character, moving the cursor to the next line on the Serial Monitor for better readability.<br><br>
 
-  - **`else`**:
-    - If devices were found, it prints the total number of devices detected.
+```cpp
+nDevices++;
+```
+Increments the device counter by one for each detected device.<br><br>
 
-  - **`delay(5000);`**:
-    - Pauses the program for **5000 milliseconds** (5 seconds) before starting the next scan. This helps to avoid overwhelming the Serial Monitor with too much data too quickly.
+```cpp
+if (nDevices == 0) {
+```
+After checking all addresses, it checks if no devices were found. If true, it prints a message indicating that no devices were detected.<br><br>
+```cpp
+else {
+```
+If devices were found, it prints the total number of devices detected.<br><br>
+
+```cpp
+delay(5000);
+```
+Pauses the program for **5000 milliseconds** (5 seconds) before starting the next scan. This helps to avoid overwhelming the Serial Monitor with too much data too quickly.<br><br>
+
 
 ### Code Logic
 
