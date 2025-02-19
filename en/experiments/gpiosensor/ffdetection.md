@@ -1,80 +1,137 @@
 ---
-title: LED Glows on High Temperature
-description: An educational experiment where an LED turns on when the temperature exceeds a threshold.
+title: "Detecting Free Fall with an Accelerometer"
+description: "Learn how to detect free fall conditions using acceleration values from the GY-521 accelerometer."
 ---
 
-# LED Glows on High Temperature
+# **Detecting Free Fall with an Accelerometer**
 
-In this experiment, we'll use the **DHT11** temperature sensor with **E-Cube** to control an LED. The LED will turn on when the temperature exceeds a predefined threshold.
+In this guide, we will learn how to use the **GY-521 (MPU6050)** accelerometer module with **E-Cube** to detect free fall. This project introduces **motion sensing, physics-based analysis, and real-world applications of acceleration data**.
 
-## 🔍 **Introduction**
-Temperature monitoring is an essential part of many applications, including weather stations, home automation, and industrial processes. This experiment demonstrates how to read temperature data and trigger an LED when the temperature is too high.
+## **What is Free Fall?**
+Free fall occurs when an object moves under the influence of gravity alone, without any other forces acting on it. In the absence of air resistance, all objects experience the same acceleration due to gravity, **9.81 m/s²**.
 
-## 🛠️ **Components Required**
+### **Physics Behind Free Fall**
+During free fall, the only force acting on an object is gravity. The acceleration due to gravity (**g**) is constant:
+
+$$ a = g = 9.81 \, m/s^2 $$
+
+However, if an accelerometer in free fall is also falling at the same rate as gravity, it **experiences zero acceleration relative to itself**.
+
+## **How Does an Accelerometer Detect Free Fall?**
+An accelerometer like the **GY-521 (MPU6050)** measures acceleration along three axes (**X, Y, and Z**). In normal conditions, the sensor reads around **±9.81 m/s²** due to Earth's gravity.  
+
+During free fall:
+- The measured acceleration approaches **0 m/s²** in all axes.
+- If all acceleration components (**ax, ay, az**) are close to zero, the sensor is likely in free fall.
+
+## **Components Required**
 - **E-Cube**
-- **DHT11 Temperature Sensor**
-- **LED**
-- **220Ω Resistor**
+- **GY-521 (MPU6050) Accelerometer**
 - **Jumper Wires**
-- **Breadboard (optional)**
+- **USB Cable**
+- **PC for Programming**
 
-## 🌡️ **What is Temperature?**
-Temperature is a measure of the heat energy in an object or environment. It is commonly measured in **Celsius (°C)** or **Fahrenheit (°F)**. Sensors like the **DHT11** help us measure temperature digitally.
+## **Setup**
+Refer to [Soldering](/en/assembly/soldering.md) if you haven't already attached the **GY-521 module** to the **EPS Board**.
 
-## 🔧 **How the Circuit Works**
-1. The **DHT11 sensor** reads the temperature.
-2. The **E-Cube** processes the temperature data.
-3. If the temperature exceeds a defined threshold (e.g., 30°C), the **LED turns on**.
-4. If the temperature is below the threshold, the **LED remains off**.
+## **Code: Detecting Free Fall Using GY-521**  
 
-## 🛠️ **Circuit Diagram**
-Refer to the following connection guide:
-- **DHT11 Sensor:**
-  - VCC → 3.3V (on E-Cube)
-  - GND → GND (on E-Cube)
-  - DATA → GPIO 37 (on E-Cube)
-- **LED:**
-  - Anode (long leg) → GPIO 5 (on E-Cube) via a **220Ω resistor**
-  - Cathode (short leg) → GND (on E-Cube)
+Refer to [Environment Setup](/en/operationguide/environmentsetup.md) and [Executing The Code](/en/operationguide/executingthecode.md) for IDE setup and programming guide.
 
-## 💻 **Code Implementation**
-Upload the following **code** to your E-Cube:
+## Code  
+
+<a href="/public/GY521-freefall.zip" download style="display: inline-block; padding: 10px 15px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">
+Download Free Fall Detection Code
+</a>
+
+## Code Implementation Steps
+
+- **Download the Code from link above and Extract it**  
+- **Open the .ino file**  
+- **Execute It**  
+
+:::tip
+Refer to [Environment Setup](/en/operationguide/environmentsetup.md) and [Executing The Code](/en/operationguide/executingthecode.md) for IDE setup and programming guide.
+:::
+
+:::info
+The name of .ino file and the folder that contains it must have the same name. It is already setup in the zip. If you wish to change it then make sure the names match.
+:::
+
+## **Code Overview**
+The code initializes the **MPU6050** accelerometer, continuously reads acceleration values, and detects when all three axes approach **zero acceleration**, indicating free fall.
+
+## **Code Breakdown**
 
 ```cpp
-#include "DHT.h"
+#include <MPU6050.h>
+```
+Includes the MPU6050 library for easy interfacing.<br><br>
 
-#define DHTPIN 37        // Pin where the DHT11 is connected
-#define DHTTYPE DHT11    // Type of DHT sensor
-#define LEDPIN 5         // Pin where the LED is connected
-#define TEMP_THRESHOLD 30 // Temperature threshold in °C
+```cpp
+MPU6050 mpu;
+```
+Creates an MPU6050 object to communicate with the sensor.<br><br>
 
-DHT dht(DHTPIN, DHTTYPE);
+```cpp
+mpu.initialize();
+```
+Initializes the sensor and verifies the connection.<br><br>
 
-void setup() {
-  Serial.begin(115200); // Initialize serial communication
-  dht.begin();          // Initialize the DHT11 sensor
-  pinMode(LEDPIN, OUTPUT); // Set LED pin as output
-}
+```cpp
+int16_t ax, ay, az;
+```
+Declares variables to store acceleration values along X, Y, and Z axes.<br><br>
 
-void loop() {
-  delay(2000); // Wait a few seconds between measurements
-  
-  float temperature = dht.readTemperature(); // Read temperature
+```cpp
+mpu.getAcceleration(&ax, &ay, &az);
+```
+Reads acceleration data from the sensor.<br><br>
 
-  if (isnan(temperature)) { // Check if the reading failed
-    Serial.println("Failed to read from DHT sensor!");
-    return;
-  }
+```cpp
+float totalAcceleration = sqrt(ax * ax + ay * ay + az * az);
+```
 
-  Serial.print("Temperature: ");
-  Serial.print(temperature);
-  Serial.println("°C");
+Computes the total acceleration magnitude.<br><br>
 
-  if (temperature > TEMP_THRESHOLD) {
-    digitalWrite(LEDPIN, HIGH); // Turn LED ON
-    Serial.println("LED ON: High Temperature!");
-  } else {
-    digitalWrite(LEDPIN, LOW); // Turn LED OFF
-    Serial.println("LED OFF: Normal Temperature");
-  }
-}
+```cpp
+if (totalAcceleration < 2.0)
+```
+Checks if the acceleration is significantly below the expected 9.81 m/s², indicating free fall.<br><br>
+
+```cpp
+Serial.println("Free Fall Detected!");
+```
+Prints a message when free fall is detected.<br><br>
+
+## **What You Can Learn from This Project**  
+This project introduces key concepts in **motion sensing, physics applications, and embedded systems**. By completing it, you will gain hands-on experience in the following areas:  
+
+### **1. Understanding Accelerometer Sensors**  
+- Learn how **MPU6050** works and how it measures **acceleration**.  
+- Understand the **role of MEMS technology** in detecting motion and free fall.  
+
+### **2. Microcontroller Interfacing**  
+- Learn how to connect and interface the **GY-521** sensor with **ESP32-S3**.  
+- Understand how to read sensor data using **I2C communication**.  
+
+### **3. Physics and Motion Analysis**  
+- Apply **Newton’s Laws** to detect free fall conditions.  
+- Understand how accelerometers detect **linear acceleration and zero gravity states**.  
+
+### **4. Serial Communication and Debugging**  
+- Learn how to print **real-time sensor data** to the **Serial Monitor**.  
+- Understand how to **troubleshoot** sensor readings and improve code reliability.  
+
+### **5. Practical Applications in Real Life**  
+- Understand how **free fall detection is used in smartphones, aerospace, and emergency response systems**.  
+- Explore how similar concepts apply to **drop detection, impact sensing, and astronaut training**.  
+
+## **Try It Yourself!**
+
+### **Impact Detection**  
+Modify the project to detect **sudden acceleration spikes** when an object hits the ground.
+
+### **Parachute Deployment System**  
+Use the free fall detection system to trigger **automatic parachute deployment** when free fall is detected.
+
