@@ -65,8 +65,8 @@ export default defineConfig({
     sidebar: getSidebar.sidebar("en"),
 
     editLink: {
-      pattern: "https://crowdin.com/project/px4-user-guide",
-      text: "Edit translation on Crowdin",
+      pattern: "https://github.com/Antarikchya-Prathisthan-Nepal/learn.antarikchya",
+      text: "Edit this page on GitHub",
     },
 
     search: {
@@ -112,6 +112,11 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/antarikchya-Prathisthan-Nepal" },
     ],
+
+    // Step 1: Enable Contributors and Last Updated Date
+    contributors: true, // Enables contributor list
+    lastUpdated: true,  // Enables last updated timestamp
+    lastUpdatedText: "Last Updated", // Custom text for last updated field
   },
 
   head: [
