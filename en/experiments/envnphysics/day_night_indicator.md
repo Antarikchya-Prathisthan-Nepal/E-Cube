@@ -1,4 +1,4 @@
-# Day/Night Detector Using E_Cube
+# Day/Night Detector Using E-Cube
 
 ## Introduction
 

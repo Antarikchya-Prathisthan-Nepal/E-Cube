@@ -110,27 +110,10 @@ This project introduces key concepts in **environmental sensing, physics applica
 - Understand how **barometric sensors are used in weather stations, drones, and aerospace**.  
 - Explore how similar concepts apply to **altitude estimation, pressure monitoring, and flight stability**.  
 
-## **Try It Yourself!**
 
-### **Altitude Calculation**  
-Modify the project to calculate **altitude** using the standard atmospheric formula:
-
-$$ h = \frac{T_0}{L} \left[ 1 - \left(\frac{P}{P_0}\right)^\frac{R L}{g} \right] $$
-
-where:
-- **h** is altitude  
-- **T₀** is sea-level temperature  
-- **L** is temperature lapse rate  
-- **P₀** is sea-level pressure  
-- **P** is measured pressure  
-
-### **Weather Forecasting**  
-Monitor **pressure trends** over time and predict **weather changes** based on pressure variations.
-
----
 
 This project provides a **solid foundation** for environmental sensing and physics-based applications.  
 
 ### **See also:**
 - [Measuring Temperature with BMP180](/en/sensors/bmp180_temp.md)  
-- [Interfacing I2C Sensors](/en
+- [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)
