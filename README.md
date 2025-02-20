@@ -1,4 +1,4 @@
-# PX4 User Guide
+# Open-Source Satellite and Robotics Learning Platform by [Antarikchya](https://www.antarikchya.org.np)
 
 This repo contains the source code for the [PX4 User Guide](https://docs.px4.io/main/en/).
 The guide is intended for people who want to:
