@@ -103,8 +103,8 @@ void loop() {
 ```cpp
 const int solarPin = IO3
 ```
-- Defines solarPin as IO3, where the solar panel is connected.
-This pin is used to read analog voltage values.
+- Defines **solarPin** as **IO3**, where the solar panel is connected.
+- This pin is used to read **analog** voltage values.
 
 ### **2. Define Variables**
 
@@ -113,11 +113,11 @@ This pin is used to read analog voltage values.
 const float referenceVoltage = 3.3;
 const int maxADC = 4095;
  ```
-- *Voltage :* Stores the calculated voltage value.
+- **Voltage :** Stores the calculated voltage value.
 
-- *referenceVoltage = 3.3V :* The ADC reference voltage is 3.3V.
+- **referenceVoltage = 3.3V :** The ADC reference voltage is 3.3V.
 
-- *maxADC = 4095 :* Since E-Cube has a 12-bit ADC, the maximum value is 4095
+- **maxADC = 4095 :** Since E-Cube has a 12-bit ADC, the maximum value is 4095
 
 ### **3. Initialize Serial Communication**
 
@@ -126,9 +126,9 @@ void setup() {
     Serial.begin(9600);
 }
  ```
-- Starts serial communication at *9600* baud.
+- Starts serial communication at **9600** baud.
 
-- This is required to display *voltage* readings in the *Serial Monitor*.
+- This is required to display **voltage** readings in the **Serial Monitor**.
 
 ### **4. Read Analog Value from Solar Panel**
 
@@ -137,7 +137,7 @@ void loop() {
     int sensorValue = analogRead(solarPin);
 
  ```
-- Reads the analog value from IO3 using *analogRead()*.
+- Reads the **analog** value from IO3 using **analogRead()**.
 
 ### **5. Convert ADC Value to Voltage**
 
@@ -146,7 +146,7 @@ void loop() {
 
  ```
 
-- Converts the *ADC* reading into actual *voltage* using the formula:  
+- Converts the **ADC** reading into actual **voltage** using the formula:  
 
 $$
 V = \frac{ADC Value}{Max ADC}\times \ Referance Voltage
@@ -159,8 +159,8 @@ $$
     Serial.println(" V");
 
  ```
-- Displays the calculated *voltage* on the *Serial Monitor*.
-- Allows real-time monitoring of *solar panel* output.
+- Displays the calculated **voltage** on the **Serial Monitor**.
+- Allows real-time monitoring of **solar panel** output.
 
 ### **7. Add Delay for Stability**
 
@@ -169,8 +169,8 @@ $$
 }
 
 ```
-- Introduces a 1-second delay before taking the next measurement.
-- Prevents excessive data output and ensures *stable* readings. 
+- Introduces a **1-second delay** before taking the next measurement.
+- Prevents excessive data output and ensures **stable** readings. 
 
 ## **What You Can Learn from This Project**
 By measuring solar panel voltage under different conditions, you will gain insight into:

@@ -24,7 +24,7 @@
         </article>
       </a>
 
-      <a class="project" href="https://www.antarikchya.org.np/" target="_blank" rel="noopener">
+      <a class="project" href="https://www.antarikchya.org.np/visualize.php" target="_blank" rel="noopener">
         <article class="box">
            <div class="icon">
             <img src="/public/sdap.png" alt="Icon" width="300" height="150">
