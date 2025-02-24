@@ -1,4 +1,4 @@
-<div style="float:right; padding:10px; margin-right:10px; margin-top:50px"><img src="../public/ecuberender.png" title="ECube render" width="180px" /></div>
+<div style="float:right; padding:10px; margin-right:10px; margin-top:0px"><img src="../public/ecuberender.png" title="ECube render" width="180px" /></div>
 
 # ECube User Guide
 
