@@ -1,97 +1,202 @@
----
-title: "Fundamentals of Electricity and Basic Circuits"
-description: "Learn about voltage, current, potential difference, transistors, and basic circuit concepts."
----
+# Using E-Cube to Monitor Water Levels with an Ultrasonic Sensor
 
-# **Fundamentals of Electricity and Basic Circuits**
+## Introduction
 
-Understanding the basics of electricity is essential for working with electronics and circuits. This guide covers key concepts such as **voltage, current, potential difference, circuit behavior, transistors, and potential divider circuits**.
+In this experiment, we will use an **E-Cube** microcontroller in combination with an **ultrasonic sensor** to monitor water levels. The ultrasonic sensor will measure the distance between the sensor and the water surface, enabling us to determine whether the water level is high or low.
 
-## **Voltage, Current, and Resistance**
+## How It Works
 
-### **Voltage (Potential Difference)**
-Voltage, also known as **potential difference**, is the energy per unit charge between two points in a circuit. It is measured in **volts (V)** and is given by:
+The **ultrasonic sensor** emits sound waves and measures the time taken for these waves to bounce back. The sensor calculates the distance by comparing how long it took for the sound waves to return. A shorter time indicates a closer object, such as the water surface, and a longer time indicates a more distant object.
 
-$$ V = IR $$
+## **How Does an Ultrasonic Sensor Work?**  
 
-where:
-- **V** is voltage (volts)
-- **I** is current (amperes)
-- **R** is resistance (ohms)
+An **ultrasonic sensor** is a device that measures **distance** using **sound waves**. It operates on the principle of **echolocation**, similar to how **bats, dolphins, and submarines** detect objects in their surroundings.  
 
-### **Current**
-Current is the flow of electric charge through a conductor. It is measured in **amperes (A)** and follows **Ohm’s Law**:
+### **Working Principle**  
+The sensor consists of two main components:  
+1. **Transmitter** – Sends out high-frequency sound waves (ultrasound).  
+2. **Receiver** – Listens for the reflected sound waves (echo).  
 
-$$ I = \frac{V}{R} $$
+The process works as follows:  
+1. The **transmitter** generates a brief ultrasonic pulse, typically at **40 kHz**.  
+2. This pulse travels through the air until it **hits an object**.  
+3. The sound wave then **bounces back** to the **receiver**.  
+4. The sensor calculates the **time taken** for the sound to travel to the object and return.  
+5. Using the known **speed of sound in air (343 m/s)**, the **distance** to the object is determined using the formula:  
 
-Current flows due to the movement of electrons in a conductor.
 
-### **Resistance**
-Resistance is the opposition to the flow of current in a circuit. It is measured in **ohms (Ω)** and depends on the material, length, and cross-sectional area of a conductor.
+ $$
+  \text{Distance} = \frac{\text{Speed of Sound} \times \text{Time}}{2}
+  $$  
 
-## **Conventional vs. Electron Flow**
+The division by **2** is necessary because the signal travels to the object and back.
 
-- **Conventional current flow** assumes that current moves from the **positive (+) terminal** to the **negative (-) terminal** of a power source.
-- **Electron flow** is the actual movement of electrons, which travel from the **negative (-) terminal** to the **positive (+) terminal**.
 
-## **Basic Circuit Elements**
+### **Key Features of Ultrasonic Sensors**  
+- **Non-contact measurement**: Ideal for detecting obstacles without physical contact.  
+- **Works in various environments**: Can operate in **darkness, fog, and dust**, unlike optical sensors.  
+- **Accuracy & reliability**: Provides **precise** distance measurements for robotics and automation.  
 
-A simple electrical circuit consists of:
-- **Voltage Source (Battery or Power Supply)** – Provides energy.
-- **Load (Resistors, LEDs, Motors, etc.)** – Uses energy.
-- **Conductors (Wires)** – Allow current flow.
-- **Switches** – Control circuit operation.
+### **Real-World Applications**  
+- **Automotive parking sensors**: Detects nearby objects when reversing a vehicle.  
+- **Robotics and obstacle avoidance**: Helps robots navigate without colliding.  
+- **Industrial automation**: Used in conveyor belts to detect and sort objects.  
+- **Medical applications**: Utilized in **ultrasound imaging** for scanning internal organs.  
 
-## **Transistors**
+By understanding how an **ultrasonic sensor works**, we can apply this knowledge to **real-world problem-solving**, including **conceptual space debris detection!** 🚀  
 
-A **transistor** is a semiconductor device used for **switching** or **amplification**. It has three terminals:
-- **Base (B)**
-- **Collector (C)**
-- **Emitter (E)**
+## **Components Required**
+- **E-Cube MSN Board**
+- **HC-SR04 Ultrasonic Sensor**
+- **LED**
+- **Resistor (220Ω)**
+- **Jumper Wires**
+- **USB Cable**
+- **PC for Programming**
 
-### **Transistor as a Switch**
+## **Circuit Connection**
 
-A transistor can act as an **electronic switch**. In an **NPN transistor**:
-- When the **base** receives a small current, the transistor turns **ON**, allowing a larger current to flow from **collector to emitter**.
-- When no current flows into the base, the transistor remains **OFF**.
+<div style="text-align: center;"><img src="/public/ultrasoniccircuit.png" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
 
-## **Potential Divider Circuit**
+| Ultrasonic Sensor (HC-SR04) | E-Cube MSN Board |
+|-----------------------------|------------------|
+| VCC                         | 5V               |
+| GND                         | GND              |
+| TRIG                        | GPIO7       |
+| ECHO                        | GPIO4       |
 
-A **potential divider** circuit is used to generate a lower voltage from a higher voltage source. It consists of two resistors in series:
+| LED | E-Cube MSN Board |
+|-----|------------------|
+| Anode (+) | GPIO2 |
+| Cathode (-) | GND |
 
-$$ V_{out} = V_{in} \times \frac{R_2}{R_1 + R_2} $$
+## **Code: Detecting Objects and Glowing LED**
+Below is the **code implementation** to interface the **ultrasonic sensor** and turn on an **LED** when an object is detected **within a critical range**.
 
-where:
-- **V_in** is the input voltage
-- **V_out** is the output voltage
-- **R1, R2** are resistors
+```cpp
+#define TRIG_PIN 7  // Define trigger pin
+#define ECHO_PIN 4  // Define echo pin
+#define LED_PIN 2   // Define LED pin
+#define THRESHOLD_DISTANCE 10 // Set threshold distance in cm
 
-Potential dividers are used in **voltage regulation, sensor interfacing, and signal conditioning**.
+void setup() {
+  pinMode(TRIG_PIN, OUTPUT);
+  pinMode(ECHO_PIN, INPUT);
+  pinMode(LED_PIN, OUTPUT);
+  Serial.begin(9600);
+}
 
-## **Other Important Concepts**
+void loop() {
+  long duration;
+  float distance;
 
-### **Ohm’s Law**
-Ohm’s Law describes the relationship between voltage, current, and resistance:
+  // Send ultrasonic pulse
+  digitalWrite(TRIG_PIN, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TRIG_PIN, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG_PIN, LOW);
 
-$$ V = IR $$
+  // Measure the time for echo signal
+  duration = pulseIn(ECHO_PIN, HIGH);
 
-It is fundamental to circuit analysis.
+  // Calculate distance in cm
+  distance = (duration * 0.0343) / 2;
 
-### **Power in Electrical Circuits**
-Power is the rate at which electrical energy is consumed:
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
 
-$$ P = VI $$
+  // Turn on LED if object is too close
+  if (distance < THRESHOLD_DISTANCE) {
+    digitalWrite(LED_PIN, HIGH);
+  } else {
+    digitalWrite(LED_PIN, LOW);
+  }
 
-where **P** is power (watts), **V** is voltage, and **I** is current.
+  delay(500);
+}
+```
+## Code Breakdown
 
-### **Series and Parallel Circuits**
-- **Series Circuits**: Current remains the same, but voltage divides.
-- **Parallel Circuits**: Voltage remains the same, but current divides.
+```cpp
+#define TRIG_PIN 7
+#define ECHO_PIN 4
+#define LED_PIN 2
+```
+Defines the GPIO pins used for the ultrasonic sensor and LED.<br><br>
 
-## **Applications of Basic Circuits**
-- **Voltage dividers** in sensor circuits.
-- **Transistors** for switching and amplification.
-- **Resistors and capacitors** for signal processing.
-- **Power regulation** in electronics.
+```cpp
+#define THRESHOLD_DISTANCE 10
+```
 
-Understanding these fundamental concepts is crucial for working with **electronics, robotics, and circuit design**.
+Sets the minimum safe distance (in cm) before triggering an alert.<br><br>
+
+```cpp
+pinMode(TRIG_PIN, OUTPUT);
+pinMode(ECHO_PIN, INPUT);
+pinMode(LED_PIN, OUTPUT);
+```
+
+Configures the trigger pin as an output, the echo pin as an input, and the LED pin as an output.<br><br>
+
+```cpp
+digitalWrite(TRIG_PIN, LOW);
+delayMicroseconds(2);
+digitalWrite(TRIG_PIN, HIGH);
+delayMicroseconds(10);
+digitalWrite(TRIG_PIN, LOW);
+```
+
+Sends an ultrasonic pulse by setting the trigger pin HIGH for 10 microseconds.<br><br>
+
+```cpp
+duration = pulseIn(ECHO_PIN, HIGH);
+distance = (duration * 0.0343) / 2;
+```
+
+Measures the time taken for the pulse to return and calculates the distance.<br><br>
+
+```cpp
+if (distance < THRESHOLD_DISTANCE) {
+  digitalWrite(LED_PIN, HIGH);
+} else {
+  digitalWrite(LED_PIN, LOW);
+}
+```
+
+Turns ON the LED when the detected object is too close, simulating a collision warning system.<br><br>
+
+## **What You Can Learn from This Project**  
+This project introduces key concepts in **distance measurement, obstacle detection, and embedded systems**. By completing it, you will gain hands-on experience in the following areas:  
+
+### **1. Understanding Ultrasonic Sensors**  
+- Learn how an **ultrasonic sensor** works and how it measures **distance**.  
+- Understand the **role of echolocation** in obstacle detection.  
+
+### **2. Microcontroller Interfacing**  
+- Learn how to connect and interface the **HC-SR04** ultrasonic sensor with **ESP32-S3**.  
+- Understand how to read sensor data using **GPIO communication**.  
+
+### **3. Physics of Sound Waves**  
+- Apply **wave propagation principles** to real-world sensing.  
+- Understand how sound waves behave in different environmental conditions.  
+
+### **4. Serial Communication and Debugging**  
+- Learn how to print **real-time sensor data** to the **Serial Monitor**.  
+- Understand how to **troubleshoot** sensor readings and improve code reliability.  
+
+### **5. Practical Applications in Real Life**  
+- Understand how **ultrasonic sensors are used in automotive, robotics, and industrial automation**.  
+- Explore how similar concepts apply to **autonomous navigation, parking sensors, and obstacle avoidance systems**.  
+
+## **Try It Yourself!**  
+
+### **Multi-Object Detection**  
+Modify the project to scan for **multiple objects** and display their distances on an LCD or serial monitor.  
+
+### **Smart Obstacle Avoidance System**  
+Use multiple ultrasonic sensors to create a **collision avoidance system** for a robot or drone.  
+
+---  
+This project provides a **solid foundation** for distance sensing and real-world engineering applications.  
