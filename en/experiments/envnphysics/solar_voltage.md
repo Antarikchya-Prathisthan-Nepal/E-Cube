@@ -59,7 +59,7 @@ In **E-Cube**, the ADC connection requires the **JP2 jumper to be shorted**. Wit
 - Locate **JP2** on the E-Cube board.
 - Use a jumper wire or solder to **short JP2** to enable the solar voltage measurement feature.
 
-  <div style="text-align: center;"><img src="../../../public/solar.png" title="On Board Computer" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>  
+  <div style="text-align: center;"><img src="/public/Solar.png" title="On Board Computer" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>  
 
   [For soldering guide check ](/en/assembly/soldering.md)  
 
@@ -201,7 +201,6 @@ By measuring solar panel voltage under different conditions, you will gain insig
 
 This project provides a **strong foundation** in solar energy, electrical measurements, and renewable energy applications.
 
-### **See also:**  
-- [Kalman Filtering Explained](/en/advanced/kalman_filter.md)  
+### **See also:**   
 - [Morse code with solar panel](/en/experiments/morsecodenlight/morse_led_transmitter.md)  
 
