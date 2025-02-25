@@ -29,7 +29,6 @@ For example:
 
 ---
 
-## **Try It Yourself!**
 ### **Step 1: Upload the Code**
 ```cpp
 const int ledPin = IO1;  // LED connected to IO1
@@ -124,4 +123,25 @@ void loop() {
 - **Digital Output Control**: Gain experience in controlling GPIO pins to turn an LED on and off programmatically.
 - **Expanding the Project**: This system can be enhanced by adding a light sensor to decode the Morse code automatically.
 
+## Practical Applications in Real Life
 
+- **Emergency Signaling**: In situations where sound-based communication is not possible, Morse code can be used with LEDs to send distress signals.
+- **Covert Communication**: Morse code can be used in military or covert operations where silent communication is needed.
+- **Low-Power Communication**: Using LEDs for Morse code transmission can be useful in power-sensitive environments, such as space missions or remote locations.
+- **Educational Tool**: Helps beginners understand the fundamentals of binary communication and timing control in microcontrollers.
+
+## Try It Yourself!
+
+To experiment with this project, you can try changing:
+
+- **Blink Speed**: Modify the timing delays to make the Morse code transmission faster or slower.
+- **LED Brightness**: If using PWM-capable pins, try varying brightness for a different effect.
+- **Custom Messages**: Replace "HELLO" with other words to transmit different Morse code sequences.
+- **Multiple LEDs**: Add multiple LEDs to send different signals in parallel.
+- **Wireless Transmission**: Use an IR LED instead of a normal LED and try to receive the signal with an IR receiver.
+
+By tweaking these parameters, you can explore different ways Morse code can be used in communication! 🚀
+
+### Also See
+
+[Morse Code Decoder](/en/experiments/morsecodenlight/morse_ldr_decoder.md)
