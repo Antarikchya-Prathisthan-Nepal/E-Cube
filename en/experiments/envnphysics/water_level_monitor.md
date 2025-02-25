@@ -1,202 +1,115 @@
-# Using E-Cube to Monitor Water Levels with an Ultrasonic Sensor
+# **Water Level Monitoring System Using ESP32-S3 and Transistors**
 
-## Introduction
+## **Introduction**
+This project demonstrates a **water level monitoring system** using the **ESP32-S3 WROOM1** and **four transistors**. The system detects water levels in a beaker and lights up corresponding **LEDs** as the water reaches different levels.
 
-In this experiment, we will use an **E-Cube** microcontroller in combination with an **ultrasonic sensor** to monitor water levels. The ultrasonic sensor will measure the distance between the sensor and the water surface, enabling us to determine whether the water level is high or low.
+---
 
-## How It Works
+## **How It Works**
+- A **ground (GND) wire** is placed at one side of the beaker.
+- **Four sensor wires** are positioned at different heights on the other side of the beaker.
+- Each sensor wire is connected to the **base of an NPN transistor**.
+- When water touches a sensor wire, it completes the circuit between the **GND wire** and the transistor base.
+- The transistor **switches on**, allowing current to flow from **ESP32-S3 GPIO → LED → transistor emitter → GND**.
+- The LED **lights up**, indicating that the water has reached that level.
 
-The **ultrasonic sensor** emits sound waves and measures the time taken for these waves to bounce back. The sensor calculates the distance by comparing how long it took for the sound waves to return. A shorter time indicates a closer object, such as the water surface, and a longer time indicates a more distant object.
-
-## **How Does an Ultrasonic Sensor Work?**  
-
-An **ultrasonic sensor** is a device that measures **distance** using **sound waves**. It operates on the principle of **echolocation**, similar to how **bats, dolphins, and submarines** detect objects in their surroundings.  
-
-### **Working Principle**  
-The sensor consists of two main components:  
-1. **Transmitter** – Sends out high-frequency sound waves (ultrasound).  
-2. **Receiver** – Listens for the reflected sound waves (echo).  
-
-The process works as follows:  
-1. The **transmitter** generates a brief ultrasonic pulse, typically at **40 kHz**.  
-2. This pulse travels through the air until it **hits an object**.  
-3. The sound wave then **bounces back** to the **receiver**.  
-4. The sensor calculates the **time taken** for the sound to travel to the object and return.  
-5. Using the known **speed of sound in air (343 m/s)**, the **distance** to the object is determined using the formula:  
-
-
- $$
-  \text{Distance} = \frac{\text{Speed of Sound} \times \text{Time}}{2}
-  $$  
-
-The division by **2** is necessary because the signal travels to the object and back.
-
-
-### **Key Features of Ultrasonic Sensors**  
-- **Non-contact measurement**: Ideal for detecting obstacles without physical contact.  
-- **Works in various environments**: Can operate in **darkness, fog, and dust**, unlike optical sensors.  
-- **Accuracy & reliability**: Provides **precise** distance measurements for robotics and automation.  
-
-### **Real-World Applications**  
-- **Automotive parking sensors**: Detects nearby objects when reversing a vehicle.  
-- **Robotics and obstacle avoidance**: Helps robots navigate without colliding.  
-- **Industrial automation**: Used in conveyor belts to detect and sort objects.  
-- **Medical applications**: Utilized in **ultrasound imaging** for scanning internal organs.  
-
-By understanding how an **ultrasonic sensor works**, we can apply this knowledge to **real-world problem-solving**, including **conceptual space debris detection!** 🚀  
+---
 
 ## **Components Required**
-- **E-Cube MSN Board**
-- **HC-SR04 Ultrasonic Sensor**
-- **LED**
-- **Resistor (220Ω)**
+
+- **4 NPN Transistors** (e.g., 2N2222)
+- **4 LEDs**
+- **4 Resistors** (1kΩ for transistor base)
 - **Jumper Wires**
-- **USB Cable**
-- **PC for Programming**
+- **Beaker filled with water**
 
-## **Circuit Connection**
+---
 
-<div style="text-align: center;"><img src="/public/ultrasoniccircuit.png" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+## **Circuit Connections**
+| **Component**  | **ESP32-S3 GPIO Pin** |
+|---------------|----------------------|
+| Level 1 Sensor (Transistor Base) | Wire dipped at Level 1 |
+| Level 2 Sensor (Transistor Base) | Wire dipped at Level 2 |
+| Level 3 Sensor (Transistor Base) | Wire dipped at Level 3 |
+| Level 4 Sensor (Transistor Base) | Wire dipped at Level 4 |
+| Level 1 LED (Connected to Collector) | GPIO 1 |
+| Level 2 LED (Connected to Collector) | GPIO 2 |
+| Level 3 LED (Connected to Collector) | GPIO 4 |
+| Level 4 LED (Connected to Collector) | GPIO 7 |
+| Transistor Emitters | Connected to GND |
 
-| Ultrasonic Sensor (HC-SR04) | E-Cube MSN Board |
-|-----------------------------|------------------|
-| VCC                         | 5V               |
-| GND                         | GND              |
-| TRIG                        | GPIO7       |
-| ECHO                        | GPIO4       |
+### **Working Mechanism**
+- Each **LED is connected between an ESP32-S3 GPIO pin and the transistor collector**.
+- The **transistor emitter is connected to GND**.
+- When water touches a level sensor wire, the transistor **turns ON**, completing the circuit.
+- The ESP32-S3 detects the water level and lights up the corresponding LED.
 
-| LED | E-Cube MSN Board |
-|-----|------------------|
-| Anode (+) | GPIO2 |
-| Cathode (-) | GND |
+---
 
-## **Code: Detecting Objects and Glowing LED**
-Below is the **code implementation** to interface the **ultrasonic sensor** and turn on an **LED** when an object is detected **within a critical range**.
-
+## **Code**
 ```cpp
-#define TRIG_PIN 7  // Define trigger pin
-#define ECHO_PIN 4  // Define echo pin
-#define LED_PIN 2   // Define LED pin
-#define THRESHOLD_DISTANCE 10 // Set threshold distance in cm
+const int led1 = 1;  // LED for level 1
+const int led2 = 2;  // LED for level 2
+const int led3 = 4;  // LED for level 3
+const int led4 = 7;  // LED for level 4
 
 void setup() {
-  pinMode(TRIG_PIN, OUTPUT);
-  pinMode(ECHO_PIN, INPUT);
-  pinMode(LED_PIN, OUTPUT);
-  Serial.begin(9600);
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
+  pinMode(led4, OUTPUT);
 }
 
 void loop() {
-  long duration;
-  float distance;
-
-  // Send ultrasonic pulse
-  digitalWrite(TRIG_PIN, LOW);
-  delayMicroseconds(2);
-  digitalWrite(TRIG_PIN, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(TRIG_PIN, LOW);
-
-  // Measure the time for echo signal
-  duration = pulseIn(ECHO_PIN, HIGH);
-
-  // Calculate distance in cm
-  distance = (duration * 0.0343) / 2;
-
-  Serial.print("Distance: ");
-  Serial.print(distance);
-  Serial.println(" cm");
-
-  // Turn on LED if object is too close
-  if (distance < THRESHOLD_DISTANCE) {
-    digitalWrite(LED_PIN, HIGH);
+  if (digitalRead(led1) == HIGH) {
+    digitalWrite(led1, HIGH);
   } else {
-    digitalWrite(LED_PIN, LOW);
+    digitalWrite(led1, LOW);
   }
 
-  delay(500);
+  if (digitalRead(led2) == HIGH) {
+    digitalWrite(led2, HIGH);
+  } else {
+    digitalWrite(led2, LOW);
+  }
+
+  if (digitalRead(led3) == HIGH) {
+    digitalWrite(led3, HIGH);
+  } else {
+    digitalWrite(led3, LOW);
+  }
+
+  if (digitalRead(led4) == HIGH) {
+    digitalWrite(led4, HIGH);
+  } else {
+    digitalWrite(led4, LOW);
+  }
 }
 ```
-## Code Breakdown
+## Try It Yourself!
 
-```cpp
-#define TRIG_PIN 7
-#define ECHO_PIN 4
-#define LED_PIN 2
-```
-Defines the GPIO pins used for the ultrasonic sensor and LED.<br><br>
+### Step 1: Set Up the Circuit  
+- Place the GND wire on one side of the beaker.  
+- Position four sensor wires on the opposite side at different heights.  
+- Connect each sensor wire to the base of an NPN transistor via a 1kΩ resistor.  
+- Connect each LED between an ESP32 GPIO pin and the transistor collector.  
+- Connect the transistor emitter to GND.  
 
-```cpp
-#define THRESHOLD_DISTANCE 10
-```
+### Step 2: Upload the Code  
+1. Connect the ESP32-S3 to your PC.  
+2. Open Arduino IDE or another programming tool.  
+3. Upload the code.  
 
-Sets the minimum safe distance (in cm) before triggering an alert.<br><br>
+### Step 3: Test the System  
+- Slowly fill the beaker with water.  
+- As the water reaches each sensor wire, the corresponding LED should turn on.  
+- When the water level drops, the LEDs should turn off accordingly.  
 
-```cpp
-pinMode(TRIG_PIN, OUTPUT);
-pinMode(ECHO_PIN, INPUT);
-pinMode(LED_PIN, OUTPUT);
-```
+## What You Can Learn from This Project  
+- How water conducts electricity and completes a circuit.  
+- How transistors function as switches.  
+- Using ESP32-S3 GPIO pins for LED control.  
+- Interfacing a microcontroller with a simple water-level detection system.  
 
-Configures the trigger pin as an output, the echo pin as an input, and the LED pin as an output.<br><br>
+This system can be expanded for automatic water pumps or IoT-based water monitoring projects! 🚀  
 
-```cpp
-digitalWrite(TRIG_PIN, LOW);
-delayMicroseconds(2);
-digitalWrite(TRIG_PIN, HIGH);
-delayMicroseconds(10);
-digitalWrite(TRIG_PIN, LOW);
-```
-
-Sends an ultrasonic pulse by setting the trigger pin HIGH for 10 microseconds.<br><br>
-
-```cpp
-duration = pulseIn(ECHO_PIN, HIGH);
-distance = (duration * 0.0343) / 2;
-```
-
-Measures the time taken for the pulse to return and calculates the distance.<br><br>
-
-```cpp
-if (distance < THRESHOLD_DISTANCE) {
-  digitalWrite(LED_PIN, HIGH);
-} else {
-  digitalWrite(LED_PIN, LOW);
-}
-```
-
-Turns ON the LED when the detected object is too close, simulating a collision warning system.<br><br>
-
-## **What You Can Learn from This Project**  
-This project introduces key concepts in **distance measurement, obstacle detection, and embedded systems**. By completing it, you will gain hands-on experience in the following areas:  
-
-### **1. Understanding Ultrasonic Sensors**  
-- Learn how an **ultrasonic sensor** works and how it measures **distance**.  
-- Understand the **role of echolocation** in obstacle detection.  
-
-### **2. Microcontroller Interfacing**  
-- Learn how to connect and interface the **HC-SR04** ultrasonic sensor with **ESP32-S3**.  
-- Understand how to read sensor data using **GPIO communication**.  
-
-### **3. Physics of Sound Waves**  
-- Apply **wave propagation principles** to real-world sensing.  
-- Understand how sound waves behave in different environmental conditions.  
-
-### **4. Serial Communication and Debugging**  
-- Learn how to print **real-time sensor data** to the **Serial Monitor**.  
-- Understand how to **troubleshoot** sensor readings and improve code reliability.  
-
-### **5. Practical Applications in Real Life**  
-- Understand how **ultrasonic sensors are used in automotive, robotics, and industrial automation**.  
-- Explore how similar concepts apply to **autonomous navigation, parking sensors, and obstacle avoidance systems**.  
-
-## **Try It Yourself!**  
-
-### **Multi-Object Detection**  
-Modify the project to scan for **multiple objects** and display their distances on an LCD or serial monitor.  
-
-### **Smart Obstacle Avoidance System**  
-Use multiple ultrasonic sensors to create a **collision avoidance system** for a robot or drone.  
-
----  
-This project provides a **solid foundation** for distance sensing and real-world engineering applications.  
