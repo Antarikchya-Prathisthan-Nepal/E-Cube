@@ -255,4 +255,6 @@ Serial.println("%");
 ### **Step 3: Run the System**
 - Open the **serial monitor** on the receiver E-Cube.
 - Observe the received humidity data.
- 
+
+### Also See 
+ #### [Information about Humidity Sensor](/en/experiments/gpiosensor/humidity_reading_dht11.md)
