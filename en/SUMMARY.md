@@ -84,8 +84,7 @@
     - [E-Cube Home Auto](experiments/smartnhome/ecube_home_automation.md)
 
 
-- [Amateur Radio](amateurradio/index.md)
-
-  - [Introduction](amateurradio/introduction.md)
+- [Amateur Radio](amateurradio/index.md) 
+  - [History of Amateur Radio](amateurradio/history.md)
 
 - [Schematics & Layouts](schematics/one.md)

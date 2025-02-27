@@ -93,7 +93,7 @@ export default defineConfig({
         items: [
           {
             text: "Amateur Radio",
-            link: "https://www.learn.antarikchya.org.np/ecube_user_guide/en/amateurradio/introduction.html",
+            link: "/en/amateurradio/index.md",
           },
           {
             text: "ARDC",
