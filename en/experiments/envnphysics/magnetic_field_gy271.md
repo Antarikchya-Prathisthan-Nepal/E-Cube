@@ -46,10 +46,16 @@ Refer to Soldering if you haven't already attached the GY-271 module to the EPS 
 
 Refer to [Environment Setup](/en/operationguide/environmentsetup.md) and [Executing The Code](/en/operationguide/executingthecode.md) for IDE setup and programming guide.
 
+## **Components Required**
 
----
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **GY-271 Sensor**     |         ✔️          |                    | 
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
 
-### ArduinoIDE Code Example:
+### Code Example:
 
 ```cpp
 #include <Wire.h>

@@ -54,13 +54,16 @@ The speed of sound depends on factors like **temperature, humidity, and air pres
 By understanding how an **ultrasonic sensor works**, we can apply this knowledge to **real-world problem-solving**, including **conceptual space debris detection!** 🚀  
 
 ## **Components Required**
-- **E-Cube MSN Board**
-- **HC-SR04 Ultrasonic Sensor**
-- **LED**
-- **Resistor (220Ω)**
-- **Jumper Wires**
-- **USB Cable**
-- **PC for Programming**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **LED**     |                  |        ✔️             | 
+| **Ultrasonic sensor (HC-SR04)** | |✔️ | 
+|Resistor (200Ω)||✔️ |
+| **Jumper Wires**            |                   | ✔️                    |
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
 
 ## **Circuit Connection**
 
