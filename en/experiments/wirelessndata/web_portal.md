@@ -1,8 +1,6 @@
 # **E-Cube Sensor Data Web Portal**
 This documentation covers the **E-Cube Web Portal**, which collects and displays sensor data from multiple modules connected to an ESP32.
 
----
-
 ## **Overview**
 The **E-Cube Sensor System** integrates the following sensors:
 
@@ -13,14 +11,11 @@ The **E-Cube Sensor System** integrates the following sensors:
 
 These sensors are connected to an **ESP32** microcontroller, which collects the data and transmits it via **serial communication**.
 
----
 
 ## **How It Works**
 1. The **ESP32** collects real-time sensor readings.
 2. The data is processed and sent via the **serial monitor**.
 3. The data can be stored or visualized using a connected interface.
-
----
 
 ## **Components Required**
 - **ESP32 Development Board**
@@ -30,11 +25,14 @@ These sensors are connected to an **ESP32** microcontroller, which collects the 
 - **MPU6050 Accelerometer & Gyroscope**
 - **Connecting Wires**
 
----
-
-
 ## **Code**
-### **ESP32 Code**
+
+
+<a href="/public/sensor_readings.zip" download style="display: inline-block; padding: 10px 15px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">
+Download E-Cube Web Portal Codes
+</a>
+
+
 ```cpp
 #include <GY271.h>
 #include <math.h>
@@ -109,13 +107,11 @@ void loop() {
     delay(250);
 }
 ```
-# **Code Breakdown for E-Cube Sensor Data Portal**
+## **Code Breakdown for E-Cube Sensor Data Portal**
 
 This breakdown explains each section of the **ESP32 Arduino code** used for collecting sensor data from **GY-271, DHT11, BMP180, and MPU6050**.
 
----
-
-## **1. Library Imports**
+### **1. Library Imports**
 ```cpp
 #include <GY271.h>
 #include <math.h>
@@ -131,7 +127,7 @@ This breakdown explains each section of the **ESP32 Arduino code** used for coll
 - **Wire.h** → Enables **I2C** communication for multiple sensors.
 - **GY521.h** → Controls the **MPU6050** Accelerometer & Gyroscope.
 
-## **2. Sensor Initialization** 
+### **2. Sensor Initialization** 
 
 ```cpp
 QMC5883LCompass compass;  // GY-271 Magnetometer
@@ -149,7 +145,7 @@ float timeStep = 0.01;
 - Assigns **I2C** pins for communication.
 - **P0** represents the standard **atmospheric pressure** at sea level.
 
-## **3. Setup Function**
+### **3. Setup Function**
 ```cpp
 void setup() {
     Serial.begin(115200);
@@ -173,7 +169,7 @@ void setup() {
 - **2G** accelerometer range
 - Power delay & sensitivity **threshold** adjustments.
 
-## **4. Main Loop**
+### **4. Main Loop**
 
 #### 4.1. GY-271 Magnetometer (Compass)
 ```cpp
@@ -227,7 +223,7 @@ Serial.print("Z_Accelerometer: "); Serial.print(normAccel.ZAxis); Serial.print("
 - Reads **X, Y, Z** acceleration data.
 - Helps measure **motion** and **orientation.**
 
-## **5. Motion Detection with MPU6050**
+### **5. Motion Detection with MPU6050**
 ```cpp
 Activites act = mpu.readActivites();
 if (act.isFreeFall) {
@@ -240,7 +236,7 @@ if (act.isActivity) {
 - Detects **motion** and **freefall events.**
 - Useful for applications like **fall detection systems.**
 
-## **6. Adding Delay for Data Stability**
+### **6. Adding Delay for Data Stability**
 ```cpp
 delay(250);
 ```
@@ -283,4 +279,5 @@ This **summary** provides a quick overview of the **main functions and practical
 
 [Acceleration from GY271](/en/experiments/gpiosensor/gyroscopic_values.md)
 
-[I2C Communication](/en/experiments/gpiosensor/i2c_communication.md)
+[I2C Communication](/en/experiments/gpiosensor/i2c_communication.md) 
+
