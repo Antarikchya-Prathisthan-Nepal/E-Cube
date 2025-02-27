@@ -110,7 +110,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/antarikchya-Prathisthan-Nepal" },
+      { icon: "github", link: "https://github.com/Antarikchya-Prathisthan-Nepal/learn.antarikchya" },
     ],
 
     // Step 1: Enable Contributors and Last Updated Date
