@@ -17,13 +17,17 @@ Home automation allows us to **remotely control electrical appliances** using se
 3. Users can also send **manual commands via a web interface or mobile app**.  
 4. Relays connected to E-Cube **switch appliances ON/OFF accordingly**.  
 
+## **Components Required**
 
-## Components Required  
-- **E-Cube (ESP32-based microcontroller)**  
-- **Relays (to control appliances)**  
-- **Sensors** (e.g., DHT11 for temperature, PIR for motion detection)  
-- **WiFi network** for remote operation  
-- **Power supply** for E-Cube  
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+|**Sensors** (e.g., DHT11 for temperature, GY-271 for magnetic feild)|✔️||
+|**Wi-fi network**| |✔️|
+|**Jumper Wires**||✔️|
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
+
 
 ## Code Implementation  
 
@@ -144,6 +148,7 @@ Using E-Cube for home automation **reduces energy consumption**, **improves secu
 
 ### Also See:
 - [Space Debris Detection using E-Cube](/en/experiments/envnphysics/ultrasonic_debris.md)
-- [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)  
 - [Using Led and E-Cube to send Morse Code](/en/experiments/morsecodenlight/morse_led_transmitter)
 - [Using Solar Panel and E-Cube to receive Morse Code](/en/experiments/morsecodenlight/morse_ldr_decoder)
+
+[Back to Home](./index.md)

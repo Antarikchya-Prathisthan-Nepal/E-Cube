@@ -21,15 +21,16 @@ This project will guide you through **setting up an E-Cube-powered smart home co
 4. Sensors (temperature, motion, etc.) can **automate appliance control**.
 5. The system **logs data and status updates** for better monitoring.
 
+## **Components Required**
 
-
-## **Required Components**
-🔹 **E-Cube ESP32-S3** – The central controller  
-🔹 **Relay Module (4-channel)** – Controls home appliances  
-🔹 **DHT11/DHT22 Sensor** – Measures temperature & humidity  
-🔹 **PIR Sensor** – Detects motion for automation  
-🔹 **LEDs or Bulbs** – For testing outputs  
-🔹 **Jumper Wires & Power Supply**  
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+|**Sensors** (e.g., DHT11 for temperature, GY-271 for magnetic feild)|✔️||
+|**Wi-fi network**| |✔️|
+|**Jumper Wires**||✔️|
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
 
 
 

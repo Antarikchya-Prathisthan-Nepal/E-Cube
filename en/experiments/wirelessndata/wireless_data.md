@@ -15,10 +15,13 @@ Wi-Fi connectivity enables **IoT applications**, allowing your ESP32-S3 to commu
 - **Web Server Applications** – Host a webpage from the ESP32 itself.
 
 ## **Components Required**
-- **ESP32-S3-WROOM-1 Development Board**
-- **USB-C Cable**
-- **Wi-Fi Network**
-- **Computer with Arduino IDE or ESP-IDF**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **Wi-fi Network**     |                   |            ✔️        | 
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|*
 
 ## **How Wi-Fi Works in ESP32-S3**
 The ESP32-S3 uses a built-in Wi-Fi transceiver to connect to local networks. It operates in **Station Mode (STA)** to connect to a router or **Access Point Mode (AP)** to create its own network.
@@ -113,3 +116,4 @@ Serve a **basic HTML page** from the ESP32-S3 and display sensor readings in rea
 - [Sending Data to Firebase](/en/iot/firebase.md)
 - [Using MQTT with ESP32-S3](/en/iot/mqtt.md)
 
+[Back to Home](./index.md)

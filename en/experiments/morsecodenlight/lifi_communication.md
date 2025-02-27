@@ -19,11 +19,22 @@ One E-Cube reads humidity data from a **DHT11 sensor** and sends it through a **
 - Converts the binary data back into **decimal (humidity value)**.
 - Displays the received **humidity** on the **serial monitor**.
 
+## **Components Required**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **2x E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **DHT11 Humidity Sensor**     |       ✔️             |                   | 
+|**Laser Diode (Transmitter)**||✔️|
+|**Solar Panel (Receiver)**|✔️||
+|**Jumper Wires**||✔️|
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
 
 ## **Components Required**
 - 2x **E-Cube (ESP32-S3 WROOM1)**
 - 1x **DHT11 Humidity Sensor**
-- 1x **Laser Diode (Transmitter)**
+- 1x ****
 - 1x **Solar Panel (Receiver)**
 - Jumper Wires
 
@@ -253,3 +264,4 @@ Serial.println("%");
 - [Space Debris Detection using E-Cube](/en/experiments/envnphysics/ultrasonic_debris.md)
 - [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)  
 
+[Back to Home](./index.md)

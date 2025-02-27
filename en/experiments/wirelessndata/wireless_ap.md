@@ -21,9 +21,15 @@ In this guide, we will configure the **E-Cube (ESP32-S3)** as a **Wireless Acces
 
 ---
 
-## **Hardware Required**
-- **E-Cube (ESP32-S3)**
-- **A device to connect** (Phone/Laptop)
+## **Components Required**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **A device to connect (Phone/Laptop)**     |                   |            ✔️        | 
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|*
+
 
 ---
 
@@ -162,3 +168,5 @@ Once connected, you can:
 - [Using Led and E-Cube to send Morse Code](/en/experiments/morsecodenlight/morse_led_transmitter)
 - [Using Solar Panel and E-Cube to receive Morse Code](/en/experiments/morsecodenlight/morse_ldr_decoder)
 - [Web Portal Using E-Cube](/en/experiments/wirelessndata/web_portal)
+
+[Back to Home](./index.md)

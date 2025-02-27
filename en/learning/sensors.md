@@ -182,3 +182,10 @@ Each sensor requires initializing a library, reading data from the sensor, and d
 - **Incorrect readings?** Ensure the sensor is not in extreme temperature/humidity environments.
 - **Compilation errors?** Double-check that the required libraries are installed correctly.
 
+### Also See:
+
+- [Sensor Experiments](/en/experiments/gpiosensor.md)
+- [Wireless data from sensors](/en/experiments/wirelessndata.md)
+- [More Sensor Experiments](/en/experiments/envnphysics.md)
+
+[Back to Home](./index.md)

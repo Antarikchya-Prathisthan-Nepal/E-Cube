@@ -46,4 +46,12 @@ If no port appears, try the following troubleshooting steps:
 The following options in the tools section of Arduino IDE are recommended for ECube.
 <div style="text-align: center;"><img src="../../public/recommendedconfig.png" title="On Board Computer" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
 
-Your Arduino IDE is now set up for E-Cube programming!
+Your Arduino IDE is now set up for E-Cube programming! 
+
+### Also See:
+
+- [Executing the Code](/en/operationguide/executingthecode.md)
+- [Boot and Reset](/en/operationguide/bootnreset.md)
+- [Switches](/en/operationguide/switches.md)
+
+[Back to Home](./index.md)

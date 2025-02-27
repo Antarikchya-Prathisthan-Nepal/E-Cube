@@ -4,11 +4,16 @@
 This project allows you to control an LED **remotely via Wi-Fi** using an ESP32-S3. By hosting a **web server**, the ESP32-S3 enables users to **toggle the LED on and off** from a web browser.
 
 ## **Components Required**
-- ESP32-S3 Module  
-- LED  
-- Resistor (220Ω)  
-- USB Cable  
-- Wi-Fi Connection  
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **Wi-fi Network**     |                   |            ✔️        | 
+| **LED** | |✔️ |
+| **Resistor (220Ω)** ||✔️ |
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
+ 
 
 ## **How It Works**
 1. The ESP32-S3 **connects to a Wi-Fi network**.
@@ -171,3 +176,5 @@ if (currentLine.endsWith("GET /L")) {
 - [ESP32-S3 Web Server Basics](/en/iot/webserver.md)  
 - [Controlling Multiple LEDs Over Wi-Fi](/en/iot/multiple_leds.md)  
 - [ESP32 IoT Dashboard](/en/iot/dashboard.md)  
+
+[Back to Home](./index.md)

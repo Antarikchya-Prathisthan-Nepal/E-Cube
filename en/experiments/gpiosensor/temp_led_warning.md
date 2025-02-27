@@ -174,3 +174,5 @@ This project provides a **solid foundation** for automated temperature-based con
 - [Using I2C Communication](/en/experiments/gpiosensor/i2c_communication)  
 - [Pressure alert system with BMP180](/en/experiments/gpiosensor/pressure_led_warning)
 - [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)
+
+[Back to Home](./index.md)

@@ -15,15 +15,18 @@ Instead of using a traditional light sensor, we leverage the ability of a **sola
 
 ## Circuit Components
 
-- **ESP32-S3 (E-Cube)**
-- **Small Solar Panel (Connected to an ADC pin)**
-- **LED or Laser Pointer (for transmitting Morse code)**
-- **Resistors and Connecting Wires**
-- **Computer (for displaying decoded text)**
+## **Components Required**
 
----
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+|**Solar Panel**|✔️||
+|**Jumper Wires**||✔️|
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
 
-#### For Connections Help See 
+
+#### For connection help see 
 [Solar Panel Connecting Guide](/en/experiments/envnphysics/solar_voltage.md)
 
 [Soildeing Guide](/en/assembly/soldering.md)
@@ -199,3 +202,6 @@ This project is a great introduction to **optical communication** and how simple
 - [Morse Code Transmitter](/en/experiments/morsecodenlight/morse_led_transmitter.md)
 - [Water Level Monitoring with E-Cube](/en/experiments/envnphysics/water_level_monitor.md)
 - [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)  
+
+
+[Back to Home](./index.md)

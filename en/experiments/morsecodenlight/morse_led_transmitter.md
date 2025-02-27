@@ -15,6 +15,17 @@ For example:
 - **"A"** in Morse code is `.-` (Short Blink, Long Blink)
 - **"B"** is `-...` (Long Blink, Short Blink, Short Blink, Short Blink)
 
+## **Components Required**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+|**LED**|✔️||
+|**Jumper Wires**||✔️|
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
+
+
 ## **Circuit Diagram**
 1. **Connect the LED** to the E cube:
    - **Anode (+) pin** to a **GPIO pin** (e.g., GPIO5)
@@ -22,6 +33,7 @@ For example:
 2. **Ensure Proper Connections**:
    - The LED should blink when the GPIO pin is set to `HIGH`
    - Turn off when set to `LOW`
+
 
 ---
 
@@ -143,3 +155,5 @@ By tweaking these parameters, you can explore different ways Morse code can be u
 - [Morse Code Decoder](/en/experiments/morsecodenlight/morse_ldr_decoder.md)
 - [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)  
 - [Parachute Design](/en/experiments/envnphysics/parachute_design)
+
+[Back to Home](./index.md)

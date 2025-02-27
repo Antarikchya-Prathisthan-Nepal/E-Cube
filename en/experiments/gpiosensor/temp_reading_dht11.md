@@ -97,3 +97,5 @@ This guide ensures that you can successfully read temperature data from the DHT1
 - [Using the GY-521 Accelerometer](/en/experiments/gpiosensor/acceleration_values)  
 - [Using the DHT11 for Humidity Reading](/en/experiments/gpiosensor/humidity_reading_dht11)
 - [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)
+
+[Back to Home](./index.md)

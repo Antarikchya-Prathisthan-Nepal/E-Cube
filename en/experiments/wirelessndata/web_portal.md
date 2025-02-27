@@ -18,12 +18,16 @@ These sensors are connected to an **ESP32** microcontroller, which collects the 
 3. The data can be stored or visualized using a connected interface.
 
 ## **Components Required**
-- **ESP32 Development Board**
-- **GY-271 Magnetometer**
-- **DHT11 Temperature & Humidity Sensor**
-- **BMP180 Pressure & Altitude Sensor**
-- **MPU6050 Accelerometer & Gyroscope**
-- **Connecting Wires**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **GY-271 Magnetometer**     |     ✔️              |                    | 
+| **DHT11 Temperature & Humidity Sensor**     |     ✔️              |                    | 
+| **BMP180 Pressure & Altitude Sensor**     |     ✔️              |                    | 
+| **MPU6050 Accelerometer & Gyroscope**     |     ✔️              |                    | 
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|*
 
 ## **Code**
 
@@ -207,3 +211,4 @@ This **summary** provides a quick overview of the **main functions and practical
 
 - [I2C Communication](/en/experiments/gpiosensor/i2c_communication.md) 
 
+[Back to Home](./index.md)
