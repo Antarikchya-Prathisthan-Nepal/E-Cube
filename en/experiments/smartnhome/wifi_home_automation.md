@@ -7,11 +7,11 @@ The **E-Cube WiFi Home Automation System** allows users to control **lights, fan
 This project will guide you through **setting up an E-Cube-powered smart home controller**, enabling wireless **switching, automation, and IoT connectivity**.  
 
 ## **Features of the System**
-✔️ **Remote Control:** Control devices from anywhere using WiFi  
-✔️ **Web-Based Interface:** A user-friendly dashboard to toggle appliances  
-✔️ **Sensor Integration:** Automate devices based on temperature, motion, or light  
-✔️ **Energy Efficient:** Reduce unnecessary power usage  
-✔️ **Customizable & Expandable:** Add more devices and sensors  
+- **Remote Control:** Control devices from anywhere using WiFi  
+- **Web-Based Interface:** A user-friendly dashboard to toggle appliances  
+- **Sensor Integration:** Automate devices based on temperature, motion, or light  
+- **Energy Efficient:** Reduce unnecessary power usage  
+- **Customizable & Expandable:** Add more devices and sensors  
 
 
 ## **How It Works**

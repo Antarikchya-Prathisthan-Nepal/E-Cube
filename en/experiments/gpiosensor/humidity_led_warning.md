@@ -11,6 +11,17 @@ In this guide, we will learn how to use the **DHT11** humidity sensor with **E-C
 Humidity refers to the amount of water vapor present in the air. It is commonly expressed as **relative humidity (RH)**, which is the percentage of moisture in the air relative to the maximum amount it can hold at a given temperature. High humidity levels can lead to discomfort, condensation, and even mold growth, while low humidity can cause dryness and irritation.
 
 ## **Components Required**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **DHT11 Sensor**     |          ✔️          |                  | 
+|**Resistor 220Ω**||✔️|
+|**LED**||✔️|
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
+
+## **Components Required**
 - **E-Cube**
 - **LED**
 - **220Ω Resistor**
@@ -172,3 +183,5 @@ This project provides a solid foundation for automated humidity-based control sy
 - [Using I2C Communication](/en/experiments/gpiosensor/i2c_communication)  
 - [Pressure alert system with BMP180](/en/experiments/gpiosensor/pressure_led_warning)
 - [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)
+
+[Back to Home](./index.md)

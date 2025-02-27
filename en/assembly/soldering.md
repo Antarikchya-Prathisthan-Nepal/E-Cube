@@ -81,3 +81,5 @@ Solder the pins one by one. Some things to keep in mind while soldering:
 - Use the right amount of solder—too much can cause bridges, too little may result in weak joints.
 - Avoid excessive heating to prevent damage to components and PCB.
 - Work in a well-ventilated area to avoid inhaling fumes.
+
+[Back to Home](./index.md)

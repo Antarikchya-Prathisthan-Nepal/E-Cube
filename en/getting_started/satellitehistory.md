@@ -39,3 +39,5 @@ These large communication satellites remain fixed in a specific position relativ
 #### Space Telescopes
 
 Satellites like the **Hubble Space Telescope** are designed for long-term scientific missions in deep space exploration. The size of a satellite impacts its design, cost, and intended use. Smaller satellites are often more cost-effective and quicker to deploy, while larger satellites tend to have more complex missions and higher costs but provide greater capacity and longer operational lifespans.
+
+[Back to Home](./index.md)

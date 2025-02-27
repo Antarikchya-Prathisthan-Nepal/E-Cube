@@ -22,11 +22,14 @@ The **BMP180** is a digital barometric pressure sensor that measures atmospheric
 - **Used in weather stations, altimeters, and drones**
 
 ## **Components Required**
-- **E-Cube**
-- **BMP180 Pressure Sensor**
-- **Jumper Wires**
-- **USB Cable**
-- **PC for Programming**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **BMP180 Pressure Sensor**     |          ✔️          |                  | 
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
+
 
 ## **Setup**
 Refer to [Soldering](/en/assembly/soldering.md) if you haven't already attached the **BMP180 module** to the **EPS Board**.
@@ -119,3 +122,4 @@ This project provides a **solid foundation** for environmental sensing and physi
 - [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)
 - [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)
 
+[Back to Home](./index.md)

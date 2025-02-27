@@ -148,4 +148,6 @@ The wire connects to the E-Cube in **EPS Board** as shown.
 
 Head towards [Operation Guide]() to use the E-Cube.
 
-<div style="text-align: center;"><img src="../../public/readyecube1.png" title="On Board Computer" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+<div style="text-align: center;"><img src="../../public/readyecube1.png" title="On Board Computer" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div> 
+
+[Back to Home](./index.md)

@@ -31,11 +31,13 @@ The MPU6050 provides:
 - **I2C communication for easy interfacing**
 
 ## **Components Required**
-- **E-Cube**
-- **GY-521 (MPU6050) Accelerometer**
-- **Jumper Wires**
-- **USB Cable**
-- **PC for Programming**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **GY-521 (MPU6050) Accelerometer**     |          ✔️          |                  | 
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
 
 ## **Setup**
 Refer to [Soldering](/en/assembly/soldering.md) if you haven't already attached the **GY-521 module** to the **EPS Board**.
@@ -137,3 +139,5 @@ This project provides a **solid foundation** for motion sensing and physics-base
 - [Using I2C Communication](/en/experiments/gpiosensor/i2c_communication)  
 - [Using the DHT11 for Temperature Reading](/en/experiments/gpiosensor/temp_reading_dht11)
 - [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)
+
+[Back to Home](./index.md)

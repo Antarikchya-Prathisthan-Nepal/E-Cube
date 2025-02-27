@@ -35,3 +35,5 @@ Vision 2050 of Antarikchya Pratisthan Nepal revolves around a milestone aiming t
 The vision of launching the first Nepalese astronaut by 2050 serves as a powerful symbol of national pride and achievement. It represents a tangible manifestation of Nepal’s commitment to pushing the boundaries of human knowledge and exploration. By embarking on this historic journey, Nepal not only elevates its status on the global stage but also inspires future generations to dream big and reach for the stars. 
 
 Vision 2050 focusing on marking a historic milestone in the nation’s journey also comprises of focused initiatives in education, training, and outreach through which the groundwork is being laid for a future where Nepalese astronauts boldly venture into the final frontier. 
+
+[Back to Home](./index.md)

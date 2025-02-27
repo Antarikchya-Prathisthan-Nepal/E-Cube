@@ -115,3 +115,5 @@ Use the provided screwdriver for assembling and securing the structural componen
 <div style="text-align: center;"><img src="../../public/itemwire.png" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
 
 Use the USB cable for programming and powering ECube through a computer or external power source.
+
+[Back to Home](./index.md)

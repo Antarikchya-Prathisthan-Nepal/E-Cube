@@ -22,11 +22,13 @@ The GY-271 provides:
 - **I2C communication for easy interfacing**
 
 ## **Components Required**
-- **E-Cube**
-- **GY-271 (QMC5883L) Compass**
-- **Jumper Wires**
-- **USB Cable**
-- **PC for Programming**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **GY-271 (QMC5883L) Compass**     |          ✔️          |                  | 
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
 
 ## **Setup**
 Refer to [Soldering](/en/assembly/soldering.md) if you haven't already attached the **GY-271 module** to the **EPS Board**.
@@ -127,3 +129,5 @@ Explore how similar concepts apply to gesture recognition and orientation tracki
 - [Using I2C Communication](/en/experiments/gpiosensor/i2c_communication)  
 - [Pressure alert system with BMP180](/en/experiments/gpiosensor/pressure_led_warning)
 - [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)
+
+[Back to Home](./index.md)

@@ -25,11 +25,13 @@ During free fall:
 - If all acceleration components (**ax, ay, az**) are close to zero, the sensor is likely in free fall.
 
 ## **Components Required**
-- **E-Cube**
-- **GY-521 (MPU6050) Accelerometer**
-- **Jumper Wires**
-- **USB Cable**
-- **PC for Programming**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **GY-521 (MPU6050) Accelerometer**     |          ✔️          |                  | 
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
 
 ## **Setup**
 Refer to [Soldering](/en/assembly/soldering.md) if you haven't already attached the **GY-521 module** to the **EPS Board**.
@@ -139,3 +141,5 @@ Use the free fall detection system to trigger **automatic parachute deployment**
 - [Using the MPU6050 Gyroscope](/en/sensors/mpu6050_gyro.md)  
 - [Pressure alert system with BMP180](/en/experiments/gpiosensor/pressure_led_warning)
 - [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)
+
+[Back to Home](./index.md)

@@ -2,7 +2,7 @@
 
 In the world of embedded systems, communication protocols are essential for enabling data exchange between microcontrollers and various peripheral devices. One of the most commonly used protocols is **I2C (Inter-Integrated Circuit)**. This guide will help you understand what I2C is, how it works, and how to establish communication between different sensors on the E-Cube.
 
-## **🔍 What is I2C?**
+## **What is I2C?**
 
 I2C is a synchronous, multi-master, multi-slave, packet-switching communication protocol developed by Philips. The beauty of I2C lies in its ability to connect multiple devices using just two wires, which simplifies wiring and reduces the complexity of circuit designs. 
 
@@ -11,7 +11,7 @@ I2C is a synchronous, multi-master, multi-slave, packet-switching communication 
 - **SDA (Serial Data Line)**: This line is used for transmitting data between devices.
 - **SCL (Serial Clock Line)**: This line is used to synchronize data transfers, ensuring that both the sender and receiver are in agreement about when data is being sent.
 
-## **📡 How Does I2C Work?**
+## **How Does I2C Work?**
 
 I2C operates in a master-slave configuration. In this setup, one device (the master) controls the communication, while other devices (the slaves) respond to requests. Each device on the I2C bus is assigned a unique address, allowing the master to communicate with the specific slave it chooses.
 
@@ -27,7 +27,7 @@ I2C operates in a master-slave configuration. In this setup, one device (the mas
 
 5. **Stop Condition**: Once the communication is complete, the master generates a stop condition by releasing the SDA line while keeping the SCL line high. This signals the end of the communication session.
 
-## **🔗 Other Communication Protocols**
+## **Other Communication Protocols**
 
 While I2C is widely used, there are other communication protocols that also serve specific purposes. Here are a few of the most common ones:
 
@@ -49,20 +49,23 @@ While I2C is widely used, there are other communication protocols that also serv
 | Speed         | Up to 1 Mbps             | Up to 100 Mbps or higher  | Up to 115200 bps          |
 | Master/Slave   | Multi-master, multi-slave| Single master, multiple slaves | Single master, single slave |
 
-## **🛠️ Experiment: Establishing I2C Communication with E-Cube Sensors**
+## **Experiment: Establishing I2C Communication with E-Cube Sensors**
 
 Now that you have a basic understanding of I2C communications, let’s put this knowledge into practice. In this experiment, we will establish I2C communication between the E-Cube and several sensors: DHT11, GY521 (MPU6050), GY271 (HMC5883L), and BMP180.
 
-### **Required Components**
+## **Components Required**
 
-To complete this experiment, you will need the following components:
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **DHT11 Sensor**     |          ✔️          |                  | 
+|**GY521 Sensor (MPU6050)**|✔️||
+|**GY271 Sensor (HMC5883L)**|✔️||
+|**BMP180 Sensor**|✔️||
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
 
-- **E-Cube**: The main microcontroller board.
-- **DHT11 Sensor**: Measures temperature and humidity.
-- **GY521 Sensor (MPU6050)**: Measures acceleration and gyroscope data.
-- **GY271 Sensor (HMC5883L)**: Measures magnetic field strength.
-- **BMP180 Sensor**: Measures temperature and pressure.
-- **Jumper Wires**: For connecting the sensors to the E-Cube.
+
 
 ### **Wiring Connections**
 
@@ -220,3 +223,5 @@ The I2C checking code scans for connected devices on the I2C bus and reports the
 - [Using the GY-521 Accelerometer](/en/experiments/gpiosensor/acceleration_values)  
 - [Using the DHT11](/en/experiments/gpiosensor/temp_reading_dht11)
 - [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)
+
+[Back to Home](./index.md)

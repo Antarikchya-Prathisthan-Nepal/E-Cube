@@ -20,7 +20,7 @@
 
   - [Sub Systems](learning/subsystems.md)
 
-  - [Sensors](operationguide/sensors.md)
+  - [Sensors](learning/sensors.md)
 
   - [Orbit of Cube SAT](learning/orbit.md)
 

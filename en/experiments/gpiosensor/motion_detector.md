@@ -13,11 +13,13 @@ Motion is defined as a **change in position** of an object with respect to a ref
 A magnetometer like the **GY-271** can be used to detect motion by measuring changes in the **magnetic field** as the device moves through space. This is particularly useful in **navigation systems, robotics, and scientific experiments**.
 
 ## **Components Required**
-- **E-Cube**
-- **GY-271 Magnetometer**
-- **Jumper Wires**
-- **USB Cable**
-- **PC for Programming**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **GY-271 Magnetometer**     |          ✔️          |                  | 
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
 
 ## **Description of GY-271 (HMC5883L)**
 The **GY-271** is a **three-axis magnetometer** that measures the **Earth’s magnetic field** in the **X, Y, and Z directions**. It is commonly used for **compass applications**, but it can also detect **motion** by analyzing variations in the magnetic field when the device moves.
@@ -189,3 +191,5 @@ This project provides an introduction to motion sensing using magnetometers. By 
 - [Using I2C Communication](/en/experiments/gpiosensor/i2c_communication)  
 - [Pressure alert system with BMP180](/en/experiments/gpiosensor/pressure_led_warning)
 - [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)
+
+[Back to Home](./index.md)

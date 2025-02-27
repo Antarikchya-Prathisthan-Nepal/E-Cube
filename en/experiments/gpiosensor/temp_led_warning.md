@@ -11,12 +11,16 @@ In this guide, we will learn how to use the **DHT11** temperature sensor with **
 Temperature is a measure of how hot or cold an object or environment is. It is typically measured in **Celsius (°C)** or **Fahrenheit (°F)**. The DHT11 sensor provides temperature readings that can be used for **automated control systems** and **environmental monitoring**.
 
 ## **Components Required**
-- **E-Cube**
-- **LED**
-- **220Ω Resistor**
-- **Jumper Wires**
-- **USB Cable**
-- **PC for Programming**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **DHT11 Sensor**     |          ✔️          |                  | 
+|**LED**||✔️|
+|**Resistor 220Ω**||✔️|
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
+
 
 ## **Description of DHT11**
 The **DHT11** is a basic, low-cost digital temperature and humidity sensor. It can measure temperature in the range of **0°C to 50°C** with an accuracy of **±2°C**. It communicates with the microcontroller using a **single-wire digital interface**, making it easy to integrate with the **ESP32-S3** in the E-Cube.

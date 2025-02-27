@@ -6,9 +6,13 @@ In this guide, we'll learn how to use the **DHT11** humidity sensor with **E-Cub
 Humidity refers to the amount of water vapor present in the air. It is commonly expressed as **relative humidity (RH)**, which is the percentage of moisture in the air relative to the maximum amount it can hold at a given temperature. High humidity levels can make the air feel warmer, while low humidity can cause dryness and discomfort.
 
 ## **Components Required**
-- **E-Cube**
-- **USB-Wire**
-- **PC for programming**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **DHT11 Sensor**     |          ✔️          |                  | 
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
 
 ## **Description of DHT11**
 The DHT11 is a basic, low-cost digital humidity sensor. It provides a digital signal output, making it easy to interface with microcontrollers like the ESP32-S3 in the E-Cube. The DHT11 can measure humidity from **20% to 90%** with an accuracy of **±5%**.
@@ -100,3 +104,5 @@ This guide ensures that you can successfully read humidity data from the DHT11 s
 - [Using the GY-521 Accelerometer](/en/experiments/gpiosensor/acceleration_values)  
 - [Using the DHT11 for Temperature Reading](/en/experiments/gpiosensor/temp_reading_dht11)
 - [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)
+
+[Back to Home](./index.md)

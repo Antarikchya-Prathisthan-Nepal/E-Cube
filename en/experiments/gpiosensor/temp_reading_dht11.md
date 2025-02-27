@@ -3,9 +3,14 @@
 In this guide, we'll learn how to use the **DHT11** temperature sensor with **E-Cube**. The DHT11 is a simple and low-cost sensor, making it ideal for various environmental monitoring applications.
 
 ## **Components Required**
-- **E-Cube**
-- **USB-Wire**
-- **PC for programming**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **DHT11 Sensor**     |          ✔️          |                  | 
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
+
 
 ## **Description of DHT11**
 The DHT11 is a basic, low-cost digital temperature sensor. It provides a digital signal output, making it easy to interface with microcontrollers like the ESP32-S3 in the E-Cube. The DHT11 can measure temperatures from **0 to 50°C** with an accuracy of **±2°C**.

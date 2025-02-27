@@ -1,4 +1,4 @@
-# ECube Sensor Guide
+# E-Cube Sensor Guide
 
 This page provides all necessary information about the four sensors included in the ECube kit, how to operate them, the required code, and explanations on how the code works.
 

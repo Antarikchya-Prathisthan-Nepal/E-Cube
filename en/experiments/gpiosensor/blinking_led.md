@@ -1,20 +1,25 @@
-# Blinking LED with ESP32-S3-WROOM-1
+# Blinking LED with E-Cube
 
-In this guide, we'll learn how to blink an LED using **ESP32-S3-WROOM-1**. This is the "Hello World" of embedded programming and a great way to get started with ESP32.
+In this guide, we'll learn how to blink an LED using **E-Cube** (ESP32-S3-WROOM-1). This is the "Hello World" of embedded programming and a great way to get started with ESP32.
 
-## **🛠️ Components Required**
-- **E-Cube**
-- **LED (Any color)**
-- **220Ω Resistor**
-- **Jumper Wires**
-- **Soldering Equipments**
+## **Components Required**
 
-## **⚡ Circuit Diagram**
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **LED**     |                    |            ✔️       | 
+|**Resistor 220Ω**||✔️|
+|**Jumper Wires**||✔️|
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
+
+
+## **Circuit Diagram**
 Connect the LED and the resistor to the payload board as follows:
 
 <div style="text-align: center;"><img src="/public/simpleled.png" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
 
-## **💻 Code: Blinking LED**
+## **Code: Blinking LED**
 
 Refer to [Environment Setup](/en/operationguide/environmentsetup.md) and [Executing The Code](/en/operationguide/executingthecode.md) for IDE setup and programming guide.
 
@@ -98,3 +103,4 @@ Now try it for yourself. You can experiment with
 - [Using the DHT11](/en/experiments/gpiosensor/temp_reading_dht11)
 - [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)
 
+[Back to Home](./index.md)
