@@ -124,7 +124,6 @@ Example:
 - **Turn ON lights at sunset**  
 - **Activate alarm when motion is detected**  
 
----
 
 ## Try It Yourself  
 **Experiment with different configurations!**  
@@ -133,7 +132,6 @@ Example:
 - **Integrate voice control** using Google Assistant or Alexa.  
 - **Build an IoT dashboard** to monitor appliance status online.  
 
----
 
 ## Real-World Applications  
 - **Smart Lighting** – Automatically adjust lights based on time.  
@@ -141,7 +139,6 @@ Example:
 - **Energy Efficiency** – Turn off unused devices automatically.  
 - **Remote Control** – Operate home appliances from anywhere.  
 
----
 
 ## Final Thoughts  
 Using E-Cube for home automation **reduces energy consumption**, **improves security**, and **adds convenience**. This system can be **expanded** for larger automation projects, integrating more sensors and controls. 🚀  
