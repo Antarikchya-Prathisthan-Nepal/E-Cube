@@ -39,7 +39,7 @@ Refer to [Environment Setup](/en/operationguide/environmentsetup.md) and [Execut
 
 ## Code
 
-<a href="/public/GY271-main.zip" download style="display: inline-block; padding: 10px 15px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">
+<a href="/GY271-main.zip" download style="display: inline-block; padding: 10px 15px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">
 Download GY271 Codes
 </a>
 

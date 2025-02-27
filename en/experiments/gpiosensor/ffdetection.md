@@ -42,7 +42,7 @@ Refer to [Environment Setup](/en/operationguide/environmentsetup.md) and [Execut
 
 ## Code  
 
-<a href="/public/GY521-freefall.zip" download style="display: inline-block; padding: 10px 15px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">
+<a href="/GY521-freefall.zip" download style="display: inline-block; padding: 10px 15px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">
 Download Free Fall Detection Code
 </a>
 

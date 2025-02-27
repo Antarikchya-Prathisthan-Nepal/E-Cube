@@ -38,7 +38,7 @@ These sensors are connected to an **ESP32** microcontroller, which collects the 
 ## **Code**
 
 
-<a href="/public/sensor_readings.zip" download style="display: inline-block; padding: 10px 15px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">
+<a href="/sensor_readings.zip" download style="display: inline-block; padding: 10px 15px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">
 Download E-Cube Web Portal Codes
 </a>
 
