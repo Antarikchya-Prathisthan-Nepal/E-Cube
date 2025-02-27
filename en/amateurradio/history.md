@@ -104,6 +104,7 @@ Despite advances in modern technology, amateur radio remains an essential tool f
 
 ### Also See:
 
-[Why Amateur Radio is used](/en/amateurradio/whyamr.md)
+- [Why Amateur Radio is used](/en/amateurradio/whyamr.md)
+- [How to get License for your own Amateur Radio](/en/amateurradio/license.md)
 
-[How to get License for your own Amateur Radio](/en/amateurradio/license.md)
+[Back to Home](./index.md)

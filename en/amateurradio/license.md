@@ -118,6 +118,7 @@ For official licensing details, visit **[ARRL.org](https://www.arrl.org)** or **
 
 ### Also See:
 
-[History of Amateur Radio](/en/amateurradio/history.md)
+- [History of Amateur Radio](/en/amateurradio/history.md)
+- [Why Amateur Radio](/en/amateurradio/whyamr.md)
 
-[Why Amateur Radio](/en/amateurradio/whyamr.md)
+[Back to Home](./index.md)

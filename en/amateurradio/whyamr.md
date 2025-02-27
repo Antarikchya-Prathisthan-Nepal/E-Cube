@@ -101,6 +101,7 @@ Ham radio operators contribute to science, support disaster response efforts, an
 
 ### Also See:
 
-[History of Amateur Radio](/en/amateurradio/history.md)
+- [History of Amateur Radio](/en/amateurradio/history.md)
+- [How to get License for your own Amateur Radio](/en/amateurradio/license.md)
 
-[How to get License for your own Amateur Radio](/en/amateurradio/license.md)
+[Back to Home](./index.md)
