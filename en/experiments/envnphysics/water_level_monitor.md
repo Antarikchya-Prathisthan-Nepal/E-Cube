@@ -55,13 +55,20 @@ Implementing robust water level monitoring systems is vital for sustainable wate
 - The transistor **switches on**, allowing current to flow from **ESP32-S3 GPIO → LED → transistor emitter → GND**.
 - The LED **lights up**, indicating that the water has reached that level.
 
-## **Components Required**
+## Components Required for Water Level Monitoring System
 
-- **4 NPN Transistors** (e.g., 2N2222)
-- **4 LEDs**
-- **4 Resistors** (1kΩ for transistor base)
-- **Jumper Wires**
-- **Beaker filled with water**
+To build a water level monitoring system, you'll need the following components:
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **NPN Transistors (4)**     |                   | ✔️                    |
+| **Jumper Wires**            |                   | ✔️                    |
+| **Breadboard**              |                   | ✔️                    |
+| **Resistors (1kΩ X 4)**  |                   | ✔️                    |
+| **Power Supply** | ✔️ |               |
+| **LED Indicators (4)**  |                 | ✔️                    |
+| **Beaker with water** | | ✔️     |
 
 ## **Circuit Connections**
 | **Component**  | **ESP32-S3 GPIO Pin** |

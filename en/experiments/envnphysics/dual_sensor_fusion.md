@@ -34,12 +34,15 @@ One of the most effective sensor fusion techniques is the **Kalman filter**. It 
 In our project, the **Kalman filter helps correct gyroscope drift using accelerometer and magnetometer data**.
 
 ## **Components Required**
-- **E-Cube (ESP32-S3)**
-- **GY-521 (MPU6050) Accelerometer/Gyroscope**
-- **GY-271 (QMC5883L) Magnetometer**
-- **Jumper Wires**
-- **USB Cable**
-- **PC for Programming**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **GY-521 (MPU6050) Accelerometer/Gyroscope**     |              ✔️     |                     |
+| **GY-271 (QMC5883L) Magnetometer** | ✔️|| 
+| **Jumper Wires**            |                   | ✔️                    |
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
 
 ## **How It Works**
 1. **Read raw data** from the GY-521 and GY-271 using I2C communication.  

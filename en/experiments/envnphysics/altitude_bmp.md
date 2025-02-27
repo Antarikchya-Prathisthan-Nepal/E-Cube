@@ -33,9 +33,12 @@ refer to [Measuring Pressure](/en/experiments/gpiosensor/pressure_values.md) for
 refer to [I2C Communication](/en/experiments/gpiosensor/i2c_communication.md) for more details on I2C Protocol.
 :::
 ## **Components Required**
-- **E-Cube**
-- **USB Cable**
-- **PC for Programming**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **USB Cable**     |          ✔️         |                     |
+| **PC for Programing**            |                   | ✔️                    |
 
 ## **Code: Reading Altitude from BMP180**
 Refer to [Environment Setup](/en/operationguide/environmentsetup.md) and [Executing The Code](/en/operationguide/executingthecode.md) for IDE setup and programming guide.
