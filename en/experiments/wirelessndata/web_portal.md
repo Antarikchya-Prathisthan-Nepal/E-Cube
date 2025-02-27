@@ -195,14 +195,15 @@ delay(250);
 
 This **summary** provides a quick overview of the **main functions and practical applications** of the **E-Cube Sensor Data Portal**. 🚀📡
 
-#### For more information about sensors check 
-[Temperature with DHT11](/en/experiments/gpiosensor/temp_led_warning.md)
+### Also See:
 
-[Humidity with DHT11](/en/experiments/gpiosensor/humidity_led_warning.md)
+- [Temperature with DHT11](/en/experiments/gpiosensor/temp_led_warning.md)
 
-[Pressure Sensor](/en/experiments/gpiosensor/pressure_led_warning.md)
+- [Humidity with DHT11](/en/experiments/gpiosensor/humidity_led_warning.md)
 
-[Acceleration from GY271](/en/experiments/gpiosensor/gyroscopic_values.md)
+- [Pressure Sensor](/en/experiments/gpiosensor/pressure_led_warning.md)
 
-[I2C Communication](/en/experiments/gpiosensor/i2c_communication.md) 
+- [Acceleration from GY271](/en/experiments/gpiosensor/gyroscopic_values.md)
+
+- [I2C Communication](/en/experiments/gpiosensor/i2c_communication.md) 
 

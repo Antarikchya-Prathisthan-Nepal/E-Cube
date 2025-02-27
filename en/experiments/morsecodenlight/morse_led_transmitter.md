@@ -138,6 +138,8 @@ To experiment with this project, you can try changing:
 
 By tweaking these parameters, you can explore different ways Morse code can be used in communication! 🚀
 
-### Also See
+### Also See:
 
-[Morse Code Decoder](/en/experiments/morsecodenlight/morse_ldr_decoder.md)
+- [Morse Code Decoder](/en/experiments/morsecodenlight/morse_ldr_decoder.md)
+- [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)  
+- [Parachute Design](/en/experiments/envnphysics/parachute_design)

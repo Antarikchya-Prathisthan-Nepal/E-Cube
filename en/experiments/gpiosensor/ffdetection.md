@@ -135,3 +135,7 @@ Modify the project to detect **sudden acceleration spikes** when an object hits 
 ### **Parachute Deployment System**  
 Use the free fall detection system to trigger **automatic parachute deployment** when free fall is detected.
 
+### **Also See:**
+- [Using the MPU6050 Gyroscope](/en/sensors/mpu6050_gyro.md)  
+- [Pressure alert system with BMP180](/en/experiments/gpiosensor/pressure_led_warning)
+- [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)

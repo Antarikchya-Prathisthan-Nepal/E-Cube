@@ -99,7 +99,7 @@ Amateur radio is a **valuable, educational, and practical** activity that extend
 
 Ham radio operators contribute to science, support disaster response efforts, and maintain an independent means of global communication. Anyone with an interest in radio technology, emergency response, or worldwide networking can find a rewarding experience in amateur radio.  
 
-### Also See
+### Also See:
 
 [History of Amateur Radio](/en/amateurradio/history.md)
 

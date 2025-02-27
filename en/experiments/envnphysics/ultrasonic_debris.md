@@ -209,6 +209,9 @@ Use multiple ultrasonic sensors to create a **collision avoidance system** for a
 ---  
 This project provides a **solid foundation** for distance sensing and real-world engineering applications.  
 
-### **See also:**  
+### **Also See:**  
 - [Using the MPU6050 Accelerometer](/en/sensors/mpu6050_accel.md)  
 - [Interfacing I2C Sensors](/en/communication/i2c.md)  
+- [Water level Monitoring with E-Cube](/en/experiments/envnphysics/water_level_monitor.md)
+
+[Back to Home](./index.md)

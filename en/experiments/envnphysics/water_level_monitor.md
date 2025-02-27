@@ -220,3 +220,10 @@ For each **LED**:
 
 This system can be expanded for automatic water pumps or IoT-based water monitoring projects! 🚀  
 
+### **Also See:**
+
+- [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)  
+- [Using Led and E-Cube to send Morse Code](/en/experiments/morsecodenlight/morse_led_transmitter)
+- [Using Solar Panel and E-Cube to receive Morse Code](/en/experiments/morsecodenlight/morse_ldr_decoder)
+
+[Back to Home](./index.md)

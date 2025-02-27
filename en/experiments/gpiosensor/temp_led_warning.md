@@ -169,4 +169,8 @@ Replace the LED with a Buzzer. You now have a temperature based buzzer system. T
 
 This project provides a **solid foundation** for automated temperature-based control systems. 
 
-### See also:
+### Also See:
+
+- [Using I2C Communication](/en/experiments/gpiosensor/i2c_communication)  
+- [Pressure alert system with BMP180](/en/experiments/gpiosensor/pressure_led_warning)
+- [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)

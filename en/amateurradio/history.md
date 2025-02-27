@@ -102,7 +102,7 @@ The 1970s and 1980s introduced digital modes like packet radio, while the 1990s 
 
 Despite advances in modern technology, amateur radio remains an essential tool for scientific research, emergency preparedness, and global connectivity, with millions of licensed operators worldwide. 🚀📡
 
-### Also See
+### Also See:
 
 [Why Amateur Radio is used](/en/amateurradio/whyamr.md)
 

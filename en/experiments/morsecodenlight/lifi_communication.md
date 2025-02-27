@@ -248,5 +248,8 @@ Serial.println("%");
 - Open the **serial monitor** on the receiver E-Cube.
 - Observe the received humidity data.
 
-### Also See 
- #### [Information about Humidity Sensor](/en/experiments/gpiosensor/humidity_reading_dht11.md)
+### Also See: 
+ - [Information about Humidity Sensor](/en/experiments/gpiosensor/humidity_reading_dht11.md)
+- [Space Debris Detection using E-Cube](/en/experiments/envnphysics/ultrasonic_debris.md)
+- [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)  
+

@@ -196,4 +196,6 @@ This project is a great introduction to **optical communication** and how simple
 
 ### Also See
 
-[Morse Code Transmitter](/en/experiments/morsecodenlight/morse_led_transmitter.md)
+- [Morse Code Transmitter](/en/experiments/morsecodenlight/morse_led_transmitter.md)
+- [Water Level Monitoring with E-Cube](/en/experiments/envnphysics/water_level_monitor.md)
+- [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)  

@@ -69,4 +69,10 @@ Using the drag equation:
 Parachute design combines physics, materials science, and engineering to ensure safe and controlled descents. By optimizing shape, materials, and deployment mechanisms, parachutes can achieve higher efficiency and reliability.
 
 ---
+### **Also See:**
+- [Space Debris Detection using E-Cube](/en/experiments/envnphysics/ultrasonic_debris.md)
+- [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)  
+- [Using Led and E-Cube to send Morse Code](/en/experiments/morsecodenlight/morse_led_transmitter)
+- [Using Solar Panel and E-Cube to receive Morse Code](/en/experiments/morsecodenlight/morse_ldr_decoder)
+
 [Back to Home](./index.md)

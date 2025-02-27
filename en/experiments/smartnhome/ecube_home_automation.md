@@ -141,3 +141,9 @@ Example:
 
 ## Final Thoughts  
 Using E-Cube for home automation **reduces energy consumption**, **improves security**, and **adds convenience**. This system can be **expanded** for larger automation projects, integrating more sensors and controls. 🚀  
+
+### Also See:
+- [Space Debris Detection using E-Cube](/en/experiments/envnphysics/ultrasonic_debris.md)
+- [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)  
+- [Using Led and E-Cube to send Morse Code](/en/experiments/morsecodenlight/morse_led_transmitter)
+- [Using Solar Panel and E-Cube to receive Morse Code](/en/experiments/morsecodenlight/morse_ldr_decoder)

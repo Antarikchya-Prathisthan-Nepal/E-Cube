@@ -62,7 +62,6 @@
     - [Parachute Design](experiments/envnphysics/parachute_design.md)
     - [Water Level Monitor](experiments/envnphysics/water_level_monitor.md)
     - [Solar Voltage](experiments/envnphysics/solar_voltage.md)
-    - [Solar LED Alert](experiments/envnphysics/solar_led_warning.md)
     - [Magnetic Field](experiments/envnphysics/magnetic_field_gy271.md)
     - [Dual-Sensor Fusion](experiments/envnphysics/dual_sensor_fusion.md)
 

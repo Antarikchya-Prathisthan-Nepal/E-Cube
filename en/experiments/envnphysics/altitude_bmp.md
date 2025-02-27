@@ -142,6 +142,9 @@ Use the BMP180 to track **pressure changes** and predict upcoming **weather cond
 
 This project provides a **solid foundation** for altitude measurement and atmospheric science.  
 
-### **See also:**
+### **Also See:**
 - [Measuring Pressure using E-Cube](/en/experiments/gpiosensor/pressure_values.md)
 - [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)  
+- [Parachute Design for E-Cube](/en/experiments/envnphysics/parachute_design.md)
+
+[Back to Home](./index.md)

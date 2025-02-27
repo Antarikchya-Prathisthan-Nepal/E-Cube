@@ -188,6 +188,6 @@ This project introduces key concepts in **sensor fusion, navigation, and embedde
 
 ---
 
-### **See also:**  
+### **Also See:**  
 - [Kalman Filtering Explained](/en/advanced/kalman_filter.md)  
 - [Interfacing I2C Sensors](/en/communication/i2c.md)  

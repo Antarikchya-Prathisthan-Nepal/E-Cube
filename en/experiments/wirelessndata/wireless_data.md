@@ -108,7 +108,7 @@ Use the ESP32-S3 to scan for nearby Wi-Fi networks and print **SSID and signal s
 Serve a **basic HTML page** from the ESP32-S3 and display sensor readings in real-time.
 
 ---
-## **See Also:**
+## **Also See:**
 - [ESP32-S3 Web Server Guide](/en/iot/webserver.md)
 - [Sending Data to Firebase](/en/iot/firebase.md)
 - [Using MQTT with ESP32-S3](/en/iot/mqtt.md)

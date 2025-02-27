@@ -171,8 +171,6 @@ void loop() {
 ```
 - Keeps the web server **active** and ready to **receive** commands.
 
-
-
 ## **Try It Yourself!**  
 
 ### **1. Add More Devices**  
@@ -201,5 +199,9 @@ void loop() {
 - Create a **basic mobile app** using **MIT App Inventor** or **Blynk**.  
 - Send commands directly from your **smartphone** instead of a browser.  
  
-## Also See
-[Home automation using E-Cube](/en/experiments/smartnhome/ecube_home_automation.md)
+### Also See:
+- [Home automation using E-Cube](/en/experiments/smartnhome/ecube_home_automation.md)
+- [Using Led and E-Cube to send Morse Code](/en/experiments/morsecodenlight/morse_led_transmitter)
+- [Using Solar Panel and E-Cube to receive Morse Code](/en/experiments/morsecodenlight/morse_ldr_decoder)
+
+[Back to Home](./index.md)

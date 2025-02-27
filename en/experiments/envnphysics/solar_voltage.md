@@ -201,6 +201,10 @@ By measuring solar panel voltage under different conditions, you will gain insig
 
 This project provides a **strong foundation** in solar energy, electrical measurements, and renewable energy applications.
 
-### **See also:**   
-- [Morse code with solar panel](/en/experiments/morsecodenlight/morse_led_transmitter.md)  
+### **Also See:**
+- [Space Debris Detection using E-Cube](/en/experiments/envnphysics/ultrasonic_debris.md)
+- [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)  
+- [Using Led and E-Cube to send Morse Code](/en/experiments/morsecodenlight/morse_led_transmitter)
+- [Using Solar Panel and E-Cube to receive Morse Code](/en/experiments/morsecodenlight/morse_ldr_decoder)
 
+[Back to Home](./index.md)

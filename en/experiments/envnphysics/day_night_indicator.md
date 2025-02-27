@@ -119,3 +119,9 @@ Try creating a circuit in which an LED glows up when its night time.
 Scale it up by connecting many LEDs to create an ambient lighting that automatically turns on when its night. 
 
 You can include this section in your VitePress project as is. Let me know if you need further modifications or additions!
+
+### **Also See:**
+- [Measuring Pressure using E-Cube](/en/experiments/gpiosensor/pressure_values.md)
+- [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)  
+- [Using Led and E-Cube to send Morse Code](/en/experiments/morsecodenlight/morse_led_transmitter)
+- [Using Solar Panel and E-Cube to receive Morse Code](/en/experiments/morsecodenlight/morse_ldr_decoder)

@@ -167,7 +167,7 @@ if (currentLine.endsWith("GET /L")) {
 - Integrate with **Blynk or MQTT** for IoT applications.
 
 ---
-## **See Also:**
+## **Also See:**
 - [ESP32-S3 Web Server Basics](/en/iot/webserver.md)  
 - [Controlling Multiple LEDs Over Wi-Fi](/en/iot/multiple_leds.md)  
 - [ESP32 IoT Dashboard](/en/iot/dashboard.md)  

@@ -114,6 +114,8 @@ This project introduces key concepts in **environmental sensing, physics applica
 
 This project provides a **solid foundation** for environmental sensing and physics-based applications.  
 
-### **See also:**
+### **Also See:**
 - [Measuring Temperature with BMP180](/en/sensors/bmp180_temp.md)  
 - [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)
+- [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)
+
