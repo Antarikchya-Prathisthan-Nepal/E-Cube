@@ -54,4 +54,12 @@ After successfully uploading your code, you can monitor the output using the Ser
 
 <div style="text-align: center;"><img src="../../public/serialplotter.png" title="On Board Computer" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
 
-Toggle between different options at the header to isolate and observe specific readings from the sensor.
+Toggle between different options at the header to isolate and observe specific readings from the sensor. 
+
+### Also See:
+
+- [Environment Setup](/en/operationguide/environmentsetup.md)
+- [Boot and Reset](/en/operationguide/bootnreset.md)
+- [Switches](/en/operationguide/switches.md)
+
+[Back to Home](./index.md)

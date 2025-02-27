@@ -122,3 +122,8 @@ Understand how to troubleshoot sensor readings and improve code reliability.
 - **Practical Applications in Real Life**
 Understand how compass sensors are used in smartphones, robotics, and navigation.
 Explore how similar concepts apply to gesture recognition and orientation tracking.
+
+### **Also See:**
+- [Using I2C Communication](/en/experiments/gpiosensor/i2c_communication)  
+- [Pressure alert system with BMP180](/en/experiments/gpiosensor/pressure_led_warning)
+- [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)

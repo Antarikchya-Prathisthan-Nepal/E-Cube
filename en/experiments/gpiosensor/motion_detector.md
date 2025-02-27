@@ -185,6 +185,7 @@ Use both the GY-271 magnetometer and the GY-521 accelerometer for more accurate 
 
 This project provides an introduction to motion sensing using magnetometers. By experimenting with different sensor combinations and algorithms, you can build advanced navigation and motion-tracking applications!
 
-## See also:
-Reading Accelerometer Data from GY-521
-Using I2C Communication in E-Cube
+### Also See:
+- [Using I2C Communication](/en/experiments/gpiosensor/i2c_communication)  
+- [Pressure alert system with BMP180](/en/experiments/gpiosensor/pressure_led_warning)
+- [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)

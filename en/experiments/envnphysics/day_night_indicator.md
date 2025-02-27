@@ -33,6 +33,15 @@ In our circuit, when the light level changes, the resistance of the LDR changes,
 
 head over to [Schematics](schematics.md) for the complete Schematics of E-cube.
 
+## **Components Required**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **LDR**     |              ✔️     |                     |
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
+
 ## Code
 
 ```cpp
@@ -119,3 +128,10 @@ Try creating a circuit in which an LED glows up when its night time.
 Scale it up by connecting many LEDs to create an ambient lighting that automatically turns on when its night. 
 
 You can include this section in your VitePress project as is. Let me know if you need further modifications or additions!
+
+### **Also See:**
+- [Measuring Pressure using E-Cube](/en/experiments/gpiosensor/pressure_values.md) 
+- [Using Led and E-Cube to send Morse Code](/en/experiments/morsecodenlight/morse_led_transmitter)
+- [Using Solar Panel and E-Cube to receive Morse Code](/en/experiments/morsecodenlight/morse_ldr_decoder)
+
+[Back to Home](./index.md)

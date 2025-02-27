@@ -215,3 +215,8 @@ The I2C checking code scans for connected devices on the I2C bus and reports the
 
 5. **Repeat Cycle**:
    - The program pauses for 5 seconds before repeating the scan, allowing for continuous monitoring of connected I2C devices.
+
+### **Also See:**
+- [Using the GY-521 Accelerometer](/en/experiments/gpiosensor/acceleration_values)  
+- [Using the DHT11](/en/experiments/gpiosensor/temp_reading_dht11)
+- [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)

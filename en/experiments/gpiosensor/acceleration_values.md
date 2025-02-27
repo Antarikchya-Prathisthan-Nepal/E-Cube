@@ -133,7 +133,7 @@ Use the accelerometer data to detect the orientation of the sensor and turn on a
 ---
 This project provides a **solid foundation** for motion sensing and physics-based applications.  
 
-### **See also:**
-- [Using the MPU6050 Gyroscope](/en/sensors/mpu6050_gyro.md)  
-- [Interfacing I2C Sensors](/en/communication/i2c.md)  
-
+### **Also See:**
+- [Using I2C Communication](/en/experiments/gpiosensor/i2c_communication)  
+- [Using the DHT11 for Temperature Reading](/en/experiments/gpiosensor/temp_reading_dht11)
+- [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)

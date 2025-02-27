@@ -93,4 +93,8 @@ Now try it for yourself. You can experiment with
 - alternatate the blinking in two LEDs
 - explore different blink patterns
 
+### **Also See:**
+- [Using I2C communication](/en/experiments/gpiosensor/i2c_communication)  
+- [Using the DHT11](/en/experiments/gpiosensor/temp_reading_dht11)
+- [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)
 

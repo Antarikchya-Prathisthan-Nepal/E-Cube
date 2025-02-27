@@ -33,9 +33,12 @@ refer to [Measuring Pressure](/en/experiments/gpiosensor/pressure_values.md) for
 refer to [I2C Communication](/en/experiments/gpiosensor/i2c_communication.md) for more details on I2C Protocol.
 :::
 ## **Components Required**
-- **E-Cube**
-- **USB Cable**
-- **PC for Programming**
+
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **USB Cable**     |          ✔️         |                     |
+| **PC for Programing**            |                   | ✔️                    |
 
 ## **Code: Reading Altitude from BMP180**
 Refer to [Environment Setup](/en/operationguide/environmentsetup.md) and [Executing The Code](/en/operationguide/executingthecode.md) for IDE setup and programming guide.
@@ -139,6 +142,9 @@ Use the BMP180 to track **pressure changes** and predict upcoming **weather cond
 
 This project provides a **solid foundation** for altitude measurement and atmospheric science.  
 
-### **See also:**
+### **Also See:**
 - [Measuring Pressure using E-Cube](/en/experiments/gpiosensor/pressure_values.md)
 - [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)  
+- [Parachute Design for E-Cube](/en/experiments/envnphysics/parachute_design.md)
+
+[Back to Home](./index.md)

@@ -46,10 +46,16 @@ Refer to Soldering if you haven't already attached the GY-271 module to the EPS 
 
 Refer to [Environment Setup](/en/operationguide/environmentsetup.md) and [Executing The Code](/en/operationguide/executingthecode.md) for IDE setup and programming guide.
 
+## **Components Required**
 
----
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **GY-271 Sensor**     |         ✔️          |                    | 
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
 
-### ArduinoIDE Code Example:
+### Code Example:
 
 ```cpp
 #include <Wire.h>
@@ -163,3 +169,11 @@ The GY-271 sensor is a versatile and powerful tool for measuring magnetic fields
 
 - [QMC5883L Datasheet](https://www.quecshine.com/UploadFile/probig/20181220164302385.pdf)
 - [Magnetic Field Basics](https://www.physicsclassroom.com/class/magnetism)
+
+### **Also See:**
+
+- [Interfacing I2C Sensors](/en/experiments/gpiosensor/i2c_communication.md)  
+- [Using Led and E-Cube to send Morse Code](/en/experiments/morsecodenlight/morse_led_transmitter)
+- [Using Solar Panel and E-Cube to receive Morse Code](/en/experiments/morsecodenlight/morse_ldr_decoder)
+
+[Back to Home](./index.md)

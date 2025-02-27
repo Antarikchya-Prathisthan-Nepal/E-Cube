@@ -95,3 +95,8 @@ if (isnan(h)) {
 Checks if the reading failed (i.e., if it is NaN) and prints an error message if so.<br><br>
 
 This guide ensures that you can successfully read humidity data from the DHT11 sensor on your E-Cube.
+
+### Also See:
+- [Using the GY-521 Accelerometer](/en/experiments/gpiosensor/acceleration_values)  
+- [Using the DHT11 for Temperature Reading](/en/experiments/gpiosensor/temp_reading_dht11)
+- [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)

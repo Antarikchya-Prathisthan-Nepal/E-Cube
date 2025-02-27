@@ -166,6 +166,7 @@ Use the pressure sensor to trigger a **buzzer or alarm** when pressure drops sud
 
 This project provides a **solid foundation** for automation using pressure sensors and real-time monitoring.  
 
-### **See also:**
+### **Also See:**
 - [Using the BMP180 for Altitude Measurement](/en/sensors/bmp180_altitude.md)  
 - [Interfacing I2C Sensors](/en/communication/i2c.md)  
+- [Using the GY-271 Magnetometer](/en/experiments/gpiosensor/motion_detector)

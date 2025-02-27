@@ -51,9 +51,19 @@ E-Cube allows us to capture **real-time analog data** from the solar panel and c
 3. The raw ADC value is converted to actual voltage using a formula.
 4. The data is displayed or logged for analysis.
 
-# **Steps to Measure Solar Panel Voltage Using E-Cube**
+## **Components Required**
 
-## **Step 1: Short JP2 Jumper for Solar Voltage Measurement**
+| Component                   | Present in E-Cube | Not Present in E-Cube |
+|-----------------------------|-------------------|-----------------------|
+| **E-Cube (ESP32-S3 Module)**| ✔️                |                       |
+| **Solar Pannel**     |         ✔️          |                    | 
+| **Jumper Wires**            |                   | ✔️                    |
+| **USB Cable**              |            ✔️       |                     |
+| **PC for Programming** ||✔️|
+
+## **Steps to Measure Solar Panel Voltage Using E-Cube**
+
+### **Step 1: Short JP2 Jumper for Solar Voltage Measurement**
 In **E-Cube**, the ADC connection requires the **JP2 jumper to be shorted**. Without this, the solar panel output will not be correctly fed into the analog input pin.
 
 - Locate **JP2** on the E-Cube board.
@@ -63,17 +73,17 @@ In **E-Cube**, the ADC connection requires the **JP2 jumper to be shorted**. Wit
 
   [For soldering guide check ](/en/assembly/soldering.md)  
 
-## **Step 2: Solar Panel Connection to IO3 of E-Cube**
+### **Step 2: Solar Panel Connection to IO3 of E-Cube**
 In E-Cube, the **solar panel is already connected to IO3**, which serves as the **ADC input pin**.
 
 - **No extra wiring is needed** for the connection.
 - Ensure the **GND is properly connected** for accurate readings.
 
-## **Step 3: Set Up E-Cube for Analog Voltage Measurement**
+### **Step 3: Set Up E-Cube for Analog Voltage Measurement**
 - Ensure E-Cube is powered on and connected to your **PC** for data logging.
 - The **IO3 pin** will read **raw analog values** from the solar panel.
 
-## **Step 4: Write and Upload the Code**
+### **Step 4: Write and Upload the Code**
 - Use the following code to read and convert **ADC values to voltage**:
 
 ```cpp
@@ -201,6 +211,9 @@ By measuring solar panel voltage under different conditions, you will gain insig
 
 This project provides a **strong foundation** in solar energy, electrical measurements, and renewable energy applications.
 
-### **See also:**   
-- [Morse code with solar panel](/en/experiments/morsecodenlight/morse_led_transmitter.md)  
+### **Also See:**
+- [Space Debris Detection using E-Cube](/en/experiments/envnphysics/ultrasonic_debris.md)
+- [Using Led and E-Cube to send Morse Code](/en/experiments/morsecodenlight/morse_led_transmitter)
+- [Using Solar Panel and E-Cube to receive Morse Code](/en/experiments/morsecodenlight/morse_ldr_decoder)
 
+[Back to Home](./index.md)

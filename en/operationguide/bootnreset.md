@@ -11,3 +11,11 @@ The boot button in the e-cube is normally high. (1 when not pressed)
 ## Reset Button (NRST)
 The Reset Button (NRST) is used to reset the STM32S3 microcontroller. When the pin is driven low (logic level 0), the microcontroller is held in a reset state, and its internal registers and peripherals are initialized. Upon releasing the reset pin, the microcontroller will restart and begin execution from the defined start address (typically the reset vector in flash memory). The reset function is essential for recovering from faults, performing system initialization, or re-initiating the device during system upgrades.
 The reset button in the e-cube is normally high. (1 when not pressed)
+
+### Also See:
+
+- [Executing the Code](/en/operationguide/executingthecode.md)
+- [Environment Setup](/en/operationguide/environmentsetup.md)
+- [Switches](/en/operationguide/switches.md)
+
+[Back to Home](./index.md)

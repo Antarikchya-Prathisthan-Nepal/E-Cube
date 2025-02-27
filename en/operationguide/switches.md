@@ -15,3 +15,11 @@ The power to the E-cube is provided by the battery attached to the EPS board. Us
 
 ### Switch 3 toggled to USB power mode
 In this mode, the power for the satellite is provided by a USB wire in the OBC board. Use this mode when uploading codes.
+
+### Also See:
+
+- [Environment Setup](/en/operationguide/environmentsetup.md)
+- [Boot and Reset](/en/operationguide/bootnreset.md)
+- [Executing the code](/en/operationguide/executingthecodes.md)
+
+[Back to Home](./index.md)
