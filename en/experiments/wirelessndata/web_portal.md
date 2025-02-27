@@ -1,5 +1,11 @@
-# **E-Cube Sensor Data Web Portal**
-This documentation covers the **E-Cube Web Portal**, which collects and displays sensor data from multiple modules connected to an ESP32.
+# **Seeing E-Cube data wirelessly using Web Portal**
+
+## Introduction  
+
+E-Cube, powered by the **ESP32-S3-WROOM-1**, can be configured to host a **web portal** that allows users to view real-time sensor data wirelessly. By setting up a simple web server on E-Cube, users can connect to it via Wi-Fi and access data such as temperature, acceleration, and magnetic field readings.  
+
+This guide will walk you through the process of setting up a **web portal for E-Cube**, serving a webpage from the ESP32-S3, and displaying sensor data dynamically. By the end of this tutorial, you will have a functional interface to monitor E-Cube’s onboard sensors remotely.  
+
 
 ## **Overview**
 The **E-Cube Sensor System** integrates the following sensors:

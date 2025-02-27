@@ -1,7 +1,17 @@
-# **Wi-Fi Controlled LED**
+# **Control a LED wirelessly using E-Cube**
 
-## **Introduction**
-This project allows you to control an LED **remotely via Wi-Fi** using an ESP32-S3. By hosting a **web server**, the ESP32-S3 enables users to **toggle the LED on and off** from a web browser.
+## **Introduction** 
+
+In this project, we explore how to control an LED wirelessly using E-Cube. By leveraging E-Cube’s WiFi capabilities, we can send commands from a web interface or another device to turn the LED on or off remotely. This project introduces key concepts such as **wireless communication, HTTP requests, and IoT-based control systems**, making it an excellent starting point for learning about remote automation.  
+
+
+### Through this guide, you’ll learn how to:
+
+- Set up an ESP32-based web server on E-Cube.  
+- Control an LED using wireless commands.  
+- Understand the basics of HTTP communication for IoT applications.  
+
+Let’s get started and bring wireless control to your projects!  
 
 ## **Components Required**
 

@@ -1,25 +1,22 @@
 # **Creating a Wireless Access Point with E-Cube**
 Turn your **E-Cube** into a Wi-Fi hotspot, allowing devices to connect and communicate with it directly.
 
----
+## Introduction  
 
-## **Introduction**
-In this guide, we will configure the **E-Cube (ESP32-S3)** as a **Wireless Access Point (AP)**, enabling other devices (phones, laptops, IoT sensors) to connect to it without an internet connection.
+E-Cube, powered by the **ESP32-S3**, can operate as a **Wireless Access Point (AP)**, allowing other devices such as phones, laptops, and IoT sensors to connect directly without requiring an external internet connection. This enables seamless communication and data exchange between E-Cube and connected devices, making it ideal for remote experiments and standalone deployments.  
 
-### **Why Use an E-Cube Access Point?**
+In this guide, we will set up E-Cube as an AP, configure network settings, and connect devices to establish a local wireless network for data access and control.  
+
+## **Why Use an E-Cube Access Point?**
 - Provides a private network for **sensor data sharing**  
 - Ideal for **remote locations** without traditional Wi-Fi  
 - Enables **IoT devices** to communicate with each other  
 - Can be used for **local web control & automation**  
 
----
-
 ## **How It Works**
 1. The **E-Cube** creates a **Wi-Fi hotspot** (no internet needed).
 2. Devices **connect** to this hotspot.
 3. The **E-Cube** serves a **webpage** for device communication.
-
----
 
 ## **Components Required**
 
