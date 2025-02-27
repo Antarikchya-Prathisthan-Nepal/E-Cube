@@ -65,7 +65,7 @@ export default defineConfig({
     sidebar: getSidebar.sidebar("en"),
 
     editLink: {
-      pattern: "https://github.com/Antarikchya-Prathisthan-Nepal/learn.antarikchya",
+      pattern: "https://github.com/Antarikchya-Prathisthan-Nepal/learn.antarikchya/tree/main/en",
       text: "Edit this page on GitHub",
     },
 
