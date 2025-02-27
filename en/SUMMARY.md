@@ -86,5 +86,7 @@
 
 - [Amateur Radio](amateurradio/index.md) 
   - [History of Amateur Radio](amateurradio/history.md)
+  - [Why Amateur Radio](amateurradio/whyamr.md)
+  - [License for Amteur Radio](amateurradio/license.md)
 
 - [Schematics & Layouts](schematics/one.md)
