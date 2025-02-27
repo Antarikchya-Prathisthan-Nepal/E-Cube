@@ -6,16 +6,12 @@ Morse code is a method of encoding text using sequences of short and long signal
 
 Instead of using a traditional light sensor, we leverage the ability of a **solar panel** to detect variations in light intensity, allowing us to receive Morse code signals transmitted via an LED or laser.
 
----
-
 ## How It Works
 
 1. **Transmission**: A Morse code signal is sent using an LED or a laser. The light intensity changes based on the Morse code pattern.
 2. **Detection**: A small solar panel captures the incoming light and converts it into voltage.
 3. **Processing**: The ESP32 reads the fluctuating voltage values and translates them into Morse code based on timing.
 4. **Decoding**: The microcontroller processes the Morse code and converts it into readable text.
-
----
 
 ## Circuit Components
 
@@ -49,8 +45,6 @@ Instead of using a traditional light sensor, we leverage the ability of a **sola
 | K      | -.-       | X      | -..-      |         |           |
 | L      | .-..      | Y      | -.--      |         |           |
 | M      | --        | Z      | --..      |         |           |
-
----
 
 ## Code
 
@@ -189,7 +183,6 @@ You can experiment with different parameters:
 - **Alternative Light Sources**: Try decoding signals from a flashlight, laser pointer, or LED.
 - **Wireless Communication**: Test Morse code transmission over longer distances using high-power LEDs or IR LEDs.
 
----
 
 ## What You Can Learn from This Project
 

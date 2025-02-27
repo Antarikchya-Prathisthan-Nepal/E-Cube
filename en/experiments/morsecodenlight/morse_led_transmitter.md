@@ -3,7 +3,6 @@
 ## **Introduction**
 Morse code is a method of encoding text into short and long signals, traditionally used in telecommunication. In this project, we will use an LED to send Morse code messages by blinking it in specific patterns. This is a fun and educational project that helps understand digital signaling, binary encoding, and microcontroller programming.
 
----
 
 ## **How Morse Code Works**
 Morse code represents letters and numbers using short (`.`) and long (`-`) signals.
@@ -15,9 +14,6 @@ Morse code represents letters and numbers using short (`.`) and long (`-`) signa
 For example:
 - **"A"** in Morse code is `.-` (Short Blink, Long Blink)
 - **"B"** is `-...` (Long Blink, Short Blink, Short Blink, Short Blink)
-
-
----
 
 ## **Circuit Diagram**
 1. **Connect the LED** to the E cube:

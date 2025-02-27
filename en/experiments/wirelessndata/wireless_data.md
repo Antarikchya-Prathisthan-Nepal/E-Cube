@@ -1,11 +1,11 @@
 ---
-title: "Using Wi-Fi with ESP32-S3-WROOM-1"
+title: "Using Wi-Fi with E-Cube"
 description: "Learn how to connect the ESP32-S3-WROOM-1 to Wi-Fi and send data over the network."
 ---
 
-# **Using Wi-Fi with ESP32-S3-WROOM-1**
+# **Using Wi-Fi with E-Cube**
 
-The **ESP32-S3-WROOM-1** is a powerful Wi-Fi and Bluetooth-enabled microcontroller module based on the ESP32-S3 chip. This guide will walk you through how to set up Wi-Fi on the ESP32-S3, connect to a network, and send data over the internet.
+The **E-cube** (ESP32-S3-WROOM-1) is a powerful Wi-Fi and Bluetooth-enabled microcontroller module based on the ESP32-S3 chip. This guide will walk you through how to set up Wi-Fi on the ESP32-S3, connect to a network, and send data over the internet.
 
 ## **Why Use Wi-Fi with ESP32-S3?**
 Wi-Fi connectivity enables **IoT applications**, allowing your ESP32-S3 to communicate with servers, cloud platforms, and other devices. Some common use cases include:

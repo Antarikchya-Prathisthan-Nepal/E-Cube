@@ -5,8 +5,6 @@ Li-Fi (Light Fidelity) is a wireless communication technology that uses light wa
 
 One E-Cube reads humidity data from a **DHT11 sensor** and sends it through a **laser diode (Li-Fi transmitter)**. The other E-Cube receives the data using a **solar panel (Li-Fi receiver)** and decodes the signal.
 
----
-
 ## **How It Works**
 ### **Transmitter (E-Cube 1)**
 - Reads humidity data from a **DHT11 sensor**.
@@ -21,7 +19,6 @@ One E-Cube reads humidity data from a **DHT11 sensor** and sends it through a **
 - Converts the binary data back into **decimal (humidity value)**.
 - Displays the received **humidity** on the **serial monitor**.
 
----
 
 ## **Components Required**
 - 2x **E-Cube (ESP32-S3 WROOM1)**
@@ -29,8 +26,6 @@ One E-Cube reads humidity data from a **DHT11 sensor** and sends it through a **
 - 1x **Laser Diode (Transmitter)**
 - 1x **Solar Panel (Receiver)**
 - Jumper Wires
-
----
 
 ## **Circuit Diagram**
 ### **Transmitter (E-Cube 1)**
@@ -47,10 +42,7 @@ One E-Cube reads humidity data from a **DHT11 sensor** and sends it through a **
    - Positive → A0 (E-Cube)
    - Negative → GND
 
----
 
-
----
 
 ## **Transmitter Code (E-Cube 1)**
 ```cpp

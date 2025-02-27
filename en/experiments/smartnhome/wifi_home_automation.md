@@ -6,8 +6,6 @@ The **E-Cube WiFi Home Automation System** allows users to control **lights, fan
 
 This project will guide you through **setting up an E-Cube-powered smart home controller**, enabling wireless **switching, automation, and IoT connectivity**.  
 
----
-
 ## **Features of the System**
 ✔️ **Remote Control:** Control devices from anywhere using WiFi  
 ✔️ **Web-Based Interface:** A user-friendly dashboard to toggle appliances  
@@ -15,7 +13,6 @@ This project will guide you through **setting up an E-Cube-powered smart home co
 ✔️ **Energy Efficient:** Reduce unnecessary power usage  
 ✔️ **Customizable & Expandable:** Add more devices and sensors  
 
----
 
 ## **How It Works**
 1. The **E-Cube (ESP32-S3)** acts as a **WiFi server**, hosting a web page.
@@ -24,7 +21,7 @@ This project will guide you through **setting up an E-Cube-powered smart home co
 4. Sensors (temperature, motion, etc.) can **automate appliance control**.
 5. The system **logs data and status updates** for better monitoring.
 
----
+
 
 ## **Required Components**
 🔹 **E-Cube ESP32-S3** – The central controller  
@@ -34,7 +31,7 @@ This project will guide you through **setting up an E-Cube-powered smart home co
 🔹 **LEDs or Bulbs** – For testing outputs  
 🔹 **Jumper Wires & Power Supply**  
 
----
+
 
 ## **Code for Home Automation**
 This Arduino code runs on **E-Cube ESP32-S3**, creating a **WiFi-controlled smart home system**.
@@ -89,11 +86,11 @@ void handleWebpage() {
 }
 ```
 ---
-# **Code Breakdown: WiFi-Enabled Home Automation System**
+## **Code Breakdown**
 
 This breakdown explains the key functions of the **WiFi-enabled home automation system** using the **ESP32 and E-Cube**.
 
-## **1. Including Necessary Libraries**
+### **1. Including Necessary Libraries**
 ```cpp
 #include <WiFi.h>
 #include <WebServer.h>
@@ -101,20 +98,20 @@ This breakdown explains the key functions of the **WiFi-enabled home automation 
 - **WiFi.h:** Handles the **E-Cube** WiFi connectivity.
 - **WebServer.h:** **Enables** a simple web server to control devices remotely. 
 
-## **2. Defining WiFi Credentials**
+### **2. Defining WiFi Credentials**
 ```cpp
 const char* ssid = "Your_SSID";
 const char* password = "Your_PASSWORD";
 ```
 - Replace **"Your_SSID"** and **"Your_PASSWORD"** with your **actual WiFi** network details.
 
-## **3. Creating a Web Server Instance**
+### **3. Creating a Web Server Instance**
 ```cpp
 WebServer server(80);
 ```
 - **server(80):** Starts a web server that listens on port **80** (HTTP)
 
-## **4. Defining Relay Control Pins**
+### **4. Defining Relay Control Pins**
 ```cpp 
 const int relay1 = 12;
 const int relay2 = 13;
@@ -122,7 +119,7 @@ const int relay2 = 13;
 - **relay1** and **relay2** are connected to **GPIO** pins **12** and **13**.
 - These control the **light** and **fan**, respectively.
 
-## **5. Setting Up the ESP32 and Connecting to WiFi**
+### **5. Setting Up the ESP32 and Connecting to WiFi**
 
 ```cpp
 void setup() {
@@ -136,7 +133,7 @@ void setup() {
 - **WiFi.begin(ssid, password)**: Connects the **E-Cube** to the given WiFi network.
 - **pinMode(relay1, OUTPUT)** and **pinMode(relay2, OUTPUT)**: Set relay pins as **output**.
 
-## **6. Checking WiFi Connection**
+### **6. Checking WiFi Connection**
 ```cpp
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
@@ -145,7 +142,7 @@ void setup() {
 ```
 - The **E-Cube** waits until it connects to **WiFi**.
 
-## **7. Setting Up Web Server Endpoints**
+### **7. Setting Up Web Server Endpoints**
 
 ```cpp
 server.on("/", handleWebpage);
@@ -160,13 +157,13 @@ server.on("/relay2off", []() { digitalWrite(relay2, LOW); server.send(200, "text
 - **server.on("/relay2on")**: Turns on Relay **2** (Fan).
 - **server.on("/relay2off")**: Turns off Relay **2** (Fan).
 
-## **8. Starting the Web Server**
+### **8. Starting the Web Server**
 ```cpp
 server.begin();
 ```
 - Starts the **E-Cube's** web server.
 
-## **9. Handling Web Server Requests Continuously**
+### **9. Handling Web Server Requests Continuously**
 ```cpp
 void loop() {
   server.handleClient();
@@ -174,9 +171,9 @@ void loop() {
 ```
 - Keeps the web server **active** and ready to **receive** commands.
 
----
 
-# **Try It Yourself!**  
+
+## **Try It Yourself!**  
 
 ### **1. Add More Devices**  
 - Expand the system by adding **more relays** to control multiple appliances.  

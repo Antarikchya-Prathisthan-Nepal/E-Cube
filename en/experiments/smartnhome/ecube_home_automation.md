@@ -1,8 +1,6 @@
 # Using E-Cube for Home Automation  
 **Control appliances based on sensor inputs and wireless commands**  
 
----
-
 ## Introduction  
 Home automation allows us to **remotely control electrical appliances** using sensors and wireless communication. With E-Cube, you can build a smart system that **automatically responds to environmental conditions** (like temperature, light, or motion) and allows **manual control via WiFi**.  
 
@@ -12,8 +10,6 @@ Home automation allows us to **remotely control electrical appliances** using se
 - **Low power consumption**, making it efficient for continuous use.  
 - **Can be expanded** to control multiple devices.  
 
----
-
 ## How It Works  
 
 1. **Sensors collect data** (e.g., temperature, motion, light levels).  
@@ -21,7 +17,6 @@ Home automation allows us to **remotely control electrical appliances** using se
 3. Users can also send **manual commands via a web interface or mobile app**.  
 4. Relays connected to E-Cube **switch appliances ON/OFF accordingly**.  
 
----
 
 ## Components Required  
 - **E-Cube (ESP32-based microcontroller)**  
