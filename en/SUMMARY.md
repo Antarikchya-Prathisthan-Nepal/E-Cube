@@ -22,7 +22,7 @@
 
   - [Sensors](learning/sensors.md)
 
-  - [Orbit of Cube SAT](learning/orbit.md)
+  - [Orbit of CubeSat](learning/orbit.md)
 
   - [Testing and Analysis](learning/testingnanalysis.md)
 
