@@ -27,7 +27,7 @@ The [Operation Guide](operationguide/index.md) section contains detailed instruc
 
 ### I wish to design my own missions
 
-The [Hardware Selection & Setup](hardware/drone_parts.md) section should help you on how to get started with your own missions. The **Payload Board (MSN)** facilitates your custom mission design. 
+The [Mission Design and Experiments](mission_design/index.md) section should help you on how to get started with your own missions. The **Payload Board (MSN)** facilitates your custom mission design. 
 
 ## Getting Help and Reporting Bugs & Issues
 
