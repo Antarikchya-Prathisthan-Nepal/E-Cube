@@ -13,7 +13,7 @@ hero:
       link: /en/index.md
     - theme: alt
       text: Buy ECube
-      link: https://shop.antarikchya.org.np/
+      link: http://kickstarter.antarikchya.org.np/
     - theme: alt
       text: Source code on GitHub
       link: https://github.com/antarikchya-Prathisthan-Nepal
