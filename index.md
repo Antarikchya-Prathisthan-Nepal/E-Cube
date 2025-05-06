@@ -13,7 +13,7 @@ hero:
       link: /en/index.md
     - theme: alt
       text: Buy ECube
-      link: http://kickstarter.antarikchya.org.np/
+      link: https://www.kickstarter.com/projects/antarikchya/e-cube-build-your-own-nano-satellite
     - theme: alt
       text: Source code on GitHub
       link: https://github.com/antarikchya-Prathisthan-Nepal
