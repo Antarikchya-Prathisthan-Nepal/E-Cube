@@ -36,4 +36,4 @@ The vision of launching the first Nepalese astronaut by 2050 serves as a powerfu
 
 Vision 2050 focusing on marking a historic milestone in the nation’s journey also comprises of focused initiatives in education, training, and outreach through which the groundwork is being laid for a future where Nepalese astronauts boldly venture into the final frontier. 
 
-[Back to Home](./index.md)
+[Back to Home](././index.md)
