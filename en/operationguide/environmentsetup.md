@@ -5,6 +5,10 @@ An IDE is a software application that facilitates programming. Follow these step
 ## Download the IDE
 Visit the [Arduino website](https://www.arduino.cc/en/software) and install the latest version of the Arduino IDE.
 
+<video controls width="640">
+  <source src="/public/tutorialIDEinstall.mp4" type="video/mp4">
+</video>
+
 ### Extract and Install the Software
 Follow the installation instructions for your operating system to install the Arduino IDE.
 
