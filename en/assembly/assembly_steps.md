@@ -24,6 +24,19 @@ Ecube box contains two seperate types of screws that serve different purposes in
 ## Assembly
 After you have soldered the required sensors into **EPS board**, you can now begin the E-Cube assembly.
 
+<div style="display: flex; justify-content: center; margin-top: 20px;">
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/jZZVNOPGczc?si=lFcxjJQ0PEIT3PE9"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+</div>
+
 ### Step 1 
 
 <div style="text-align: center;"><img src="../../public/step2.png" title="On Board Computer" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
