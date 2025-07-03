@@ -10,7 +10,7 @@ export default defineConfig({
   base: "/ecube/",
 
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/apn.png' }] 
+    ['link', { rel: 'icon', type: 'image/png', href: '/images/apn.png' }] 
   ],
   
   srcExclude: [
