@@ -8,10 +8,6 @@ export default defineConfig({
   title: "Ecube Guide",
   description: "ECube User and Developer Guide",
   base: "/ecube/",
-
-  head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/apn.png' }] 
-  ],
   
   srcExclude: [
     "de/**/*.md",
@@ -125,6 +121,7 @@ export default defineConfig({
   },
 
   head: [
+     ['link', { rel: 'icon', type: 'image/png', href: '/apn.png' }], // ✅ Favicon
     [
       "script",
       {
