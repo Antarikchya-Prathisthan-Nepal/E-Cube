@@ -7,7 +7,7 @@ import tabsPlugin from "@red-asuka/vitepress-plugin-tabs";
 export default defineConfig({
   title: "Ecube Guide",
   description: "ECube User and Developer Guide",
-  base: "/",
+  base: "/ecube/",
   srcExclude: [
     "de/**/*.md",
     "ja/**/*.md",
