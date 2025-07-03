@@ -102,7 +102,7 @@ Solar panels generate power from sunlight, supplying energy to ECube’s electri
 
 ## Utilities
 
-Utilities are essential tools and accessories needed for assembling and operating ECube.
+Utilities are essential tools and accessories that are needed for assembling and operating ECube.
 
 ### 1. Screwdriver
 
