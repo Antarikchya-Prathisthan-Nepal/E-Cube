@@ -1,4 +1,4 @@
-name: Deploy VitePress to learn.antarikchya.org.np
+name: Deploy VitePress to learn.antarikchya.org.np/e-cube
 on:
   push:
     branches: [ main ]
@@ -30,5 +30,5 @@ jobs:
           username: ${{ secrets.CPANEL_USERNAME }}
           password: ${{ secrets.CPANEL_PASSWORD }}
           local-dir: ./.vitepress/dist/
-          server-dir: /ecube/
+          server-dir: /e-cube/
           protocol: ftps  # explicitly set to use FTPS
