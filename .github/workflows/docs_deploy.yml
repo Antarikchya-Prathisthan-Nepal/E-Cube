@@ -24,11 +24,11 @@ jobs:
         run: npm run docs:build
           
       - name: Deploy via SFTP
-        uses: appleboy/scp-action@v0.1.8
+        uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.SFTP_HOST }}         # server_IP or domain without sftp://
           username: ${{ secrets.SFTP_USERNAME }} # cPanel username
           password: ${{ secrets.SFTP_PASSWORD }} # cPanel password
           port: 22
-          source: ".vitepress/dist/*"
+          source: ".vitepress/dist/"
           target: "/home/antarikc/learn.antarikchya.org.np/ecube/"
