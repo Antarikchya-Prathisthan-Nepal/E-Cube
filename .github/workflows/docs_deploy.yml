@@ -1,4 +1,4 @@
-name: Deploy VitePress to learn.antarikchya.org.np/e-cube
+name: Deploy VitePress to learn.antarikchya.org.np/ecube
 on:
   push:
     branches: [ main ]
