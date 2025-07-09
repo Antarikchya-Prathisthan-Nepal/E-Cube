@@ -4,7 +4,7 @@
 
 ### [Introduction](introduction.md)
 
-An overview of satellite mission design, covering key objectives, feasibility, and constraints before development begins.
+An overview of satellite mission design, covering key objectives, feasibility and constraints before development begins.
 
 ### [Bus Systems](bussystems.md)
 
