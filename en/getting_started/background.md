@@ -1,5 +1,5 @@
 # Background
-In this document, we will discuss a brief background on satellites. We will then discuss the first satellite of Nepal - **Nepali-Sat 1**, **Antarikchya Pratisthan Nepal**, and **Vision 2050**. 
+In this document, we shall discuss a brief background on satellites. We will then discuss the first satellite of Nepal - **Nepali-Sat 1**, **Antarikchya Pratisthan Nepal**, and **Vision 2050**. 
 
 
 ## Nepali Sat-1 : The first Nano-satellite of Nepal
