@@ -31,4 +31,5 @@ jobs:
           password: ${{ secrets.SFTP_PASSWORD }} # cPanel password
           port: 22
           source: ".vitepress/dist/"
-          target: "/home/antarikc/learn.antarikchya.org.np/ecube/"
+          target: "/home/antarikc/learn.antarikchya.org.np/ecube/test"
+          strip_components: 2
