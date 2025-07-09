@@ -6,7 +6,7 @@ Today, satellites are integral to communication, navigation, weather forecasting
 
 ## Types of Satellites
 
-Based on size, satellites can be broadly classified into three types.
+Based on its size, satellites can be broadly classified into three types.
 
 ### 1. Small Satellites (SmallSats)
 
