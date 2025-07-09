@@ -22,10 +22,6 @@ jobs:
         
       - name: Build VitePress site
         run: npm run docs:build
-        
-      - name: Create .ftp-deploy-ignore file
-        run: |
-          echo "assets/app.BF9H4W0Y.js" > ./.vitepress/dist/.ftp-deploy-ignore
           
       - name: Deploy to cPanel
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
