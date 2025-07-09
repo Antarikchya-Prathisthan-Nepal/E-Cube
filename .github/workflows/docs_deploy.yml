@@ -23,14 +23,12 @@ jobs:
       - name: Build VitePress site
         run: npm run docs:build
           
-      - name: Deploy to cPanel
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Deploy via SFTP
+        uses: appleboy/scp-action@v0.1.8
         with:
-          server: antarikchya.org.np
-          username: ${{ secrets.SFTP_USERNAME }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          protocol: sftp
+          host: ${{ secrets.SFTP_HOST }}         # server_IP or domain without sftp://
+          username: ${{ secrets.SFTP_USERNAME }} # cPanel username
+          password: ${{ secrets.SFTP_PASSWORD }} # cPanel password
           port: 22
-          local-dir: .vitepress/dist/
-          server-dir: /learn.antarikchya.org.np/ecube/
-          dangerous-clean-slate: false
+          source: ".vitepress/dist/*"
+          target: "/home/antarikc/learn.antarikchya.org.np/ecube/"
