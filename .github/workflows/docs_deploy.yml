@@ -26,9 +26,11 @@ jobs:
       - name: Deploy to cPanel
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.CPANEL_SERVER }}  # will be something like ftp.antarikchya.org.np
-          username: ${{ secrets.CPANEL_USERNAME }}
-          password: ${{ secrets.CPANEL_PASSWORD }}
-          local-dir: ./.vitepress/dist/
-          server-dir: /ecube/
-          protocol: ftps  # explicitly set to use FTPS
+          server: antarikchya.org.np
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          protocol: sftp
+          port: 22
+          local-dir: .vitepress/dist/
+          server-dir: /learn.antarikchya.org.np/ecube/
+          dangerous-clean-slate: false
