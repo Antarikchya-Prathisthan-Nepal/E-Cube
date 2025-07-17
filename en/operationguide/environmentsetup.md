@@ -29,11 +29,16 @@ Follow the installation instructions for your operating system to install the Ar
 2. Search for **"ESP32 by Espressif Systems"**.
 3. Click **Install** to install the package.
 
-## Step 4: Select the Board
+<div style="text-align: center;"><img src="../../public/ide_2.png" title="On Board Computer" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+
+## Step 4: Select the Board and Port
 1. Go to **Tools > Board > ESP32 Arduino > ESP32S3 Dev Module**.
 2. Ensure the **"USB CDC on Boot"** feature is enabled.
 
-## Step 5: Select the Port
+<div style="text-align: center;"><img src="../../public/ide_1.png" title="On Board Computer" style="max-width: 100%; height: auto; width: 700px; margin-top: 20px;" /></div>
+
+
+### Select the Port
 1. Connect your ESP32S3 Dev Module to your computer via USB.
 2. Open the Arduino IDE and go to **Tools > Port**.
 3. Select the appropriate COM port (e.g., **COM3** or **/dev/ttyUSB0** for Linux/macOS).
