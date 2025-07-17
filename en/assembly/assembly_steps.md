@@ -1,9 +1,6 @@
 # Assembly Steps
 In this section, we will assemble the E-Cube. For this you will need: 1x E-cube set box from Antarikchya Pratisthan Nepal.
 
-## Prerequisites
-The first step to E-Cube assembly is soldering the 4 sensors into EPS board. If you haven't already, please head to [Soldering](soldering.md) for this step.
-
 ## Understanding Orientation
 
 <div style="text-align: center;"><img src="../../public/steppanelsalign.png" title="On Board Computer" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
@@ -21,8 +18,7 @@ Ecube box contains two seperate types of screws that serve different purposes in
 
 <div style="text-align: center;"><img src="../../public/itemscrews.png" title="On Board Computer" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
 
-## Assembly
-After you have soldered the required sensors into **EPS board**, you can now begin the E-Cube assembly.
+## Video Guide
 
 <div style="display: flex; justify-content: center; margin-top: 20px;">
   <iframe
@@ -36,6 +32,11 @@ After you have soldered the required sensors into **EPS board**, you can now beg
     allowfullscreen
   ></iframe>
 </div>
+
+## Step 0 : Soldering
+
+The first step to ECube assembly is E-Cube soldering. Please head over to [soldering](soldering.md) for this step.
+<hr>
 
 ### Step 1 
 

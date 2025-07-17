@@ -1,32 +1,12 @@
 - [Introduction](index.md)
 
-  - [Background](getting_started/background.md)
-
-  - [History of Satellites](getting_started/satellitehistory.md)
-
 - [Assembly](assembly/index.md)
-
-  - [List of Components](assembly/list_of_components.md)
-  
-  - [Soldering](assembly/soldering.md)
 
   - [Assembly Steps](assembly/assembly_steps.md)
 
-- [Learning](learning/index.md)
+  - [Soldering](assembly/soldering.md)
 
-  - [Introduction](learning/introduction.md)
-
-  - [Bus Systems](learning/bussystems.md)
-
-  - [Sub Systems](learning/subsystems.md)
-
-  - [Sensors](learning/sensors.md)
-
-  - [Orbit of CubeSat](learning/orbit.md)
-
-  - [Testing and Analysis](learning/testingnanalysis.md)
-
-  - [Recommendations](learning/recommendations.md)
+  - [List of Components](assembly/list_of_components.md)
 
 - [Operation Guide](operationguide/index.md)
 
@@ -87,5 +67,15 @@
   - [History of Amateur Radio](amateurradio/history.md)
   - [Why Amateur Radio](amateurradio/whyamr.md)
   - [License for Amteur Radio](amateurradio/license.md)
+
+- [Background and Learning](getting_started/background.md)
+  - [History of Satellites](getting_started/satellitehistory.md)
+  - [Bus Systems](learning/bussystems.md)
+  - [Sub Systems](learning/subsystems.md)
+  - [Sensors](learning/sensors.md)
+  - [Orbit of CubeSat](learning/orbit.md)
+  - [Testing and Analysis](learning/testingnanalysis.md)
+  - [Recommendations](learning/recommendations.md)
+
 
 - [Schematics & Layouts](schematics/one.md)

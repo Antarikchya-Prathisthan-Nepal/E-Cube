@@ -2,9 +2,13 @@
 
 In this section, we will test our E-Cube by running a pre-written code for E-Cube. 
 
-## Prerequisites
+## Step 0: E-Cube Assembly
 
+
+## Step 1: Environment Setup
 Before Programming, Make sure you have properly setup the environment from [Environment Setup](environmentsetup.md).
+
+This includes setting up Arduino IDE, Properly Connecting 
 
 Connect the E-Cube to your PC using the USB Cable provided.
 
