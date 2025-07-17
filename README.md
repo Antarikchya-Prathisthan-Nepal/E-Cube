@@ -8,3 +8,8 @@ The guide is intended for people who want to:
 * Learn, Assemble, and work with ECube
 * Learn how to operate various sensors
 * Learn how to design your own missions
+
+
+This project is liscened by MIT License
+
+Copyright (c) 2025 Antarikchya Pratisthan Nepal
