@@ -43,32 +43,7 @@ You will find square pads in the slots in EPS board as well. This is to highligh
 In correct orientation, the components (small blocks of resistors and capacitors) in sensors are facing upwards.
 :::
 
-## Soldering Steps
-
-### 1. Heat the Soldering Iron
-
-Turn on the soldering iron and let it heat up for a few minutes.
-
-   ::: tip
-   Always check the soldering iron temperature. For most solder types, a temperature between 350°C and 400°C is effective.
-   :::
-
-### 2. Component alignment
-
-Take any one of the sensors. Make sure the pins are aligned properly and are in the correct spot.
- 
-<div style="text-align: center;"><img src="../../public/step1.png" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
-
-::: tip
-Work on one sensor at a time.
-:::
-
- Flip the Board Backwards. **The soldering is done at the back of the EPS Board.**
-
-<div style="text-align: center;"><img src="../../public/step1.5.png" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
-
-
-### 3. Soldering the Joint
+## Soldering Procedure
 
 <div style="text-align: center;"><img src="../../public/solderingguide.jpg" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
 
@@ -81,5 +56,99 @@ Solder the pins one by one. Some things to keep in mind while soldering:
 - Use the right amount of solder—too much can cause bridges, too little may result in weak joints.
 - Avoid excessive heating to prevent damage to components and PCB.
 - Work in a well-ventilated area to avoid inhaling fumes.
+
+## Soldering Steps
+
+## 1. Heat the Soldering Iron
+
+Turn on the soldering iron and let it heat up for a few minutes.
+
+   ::: tip
+   Always check the soldering iron temperature. For most solder types, a temperature between 350°C and 400°C is effective.
+   :::
+
+## 2. Component and Pins Soldering
+
+This soldering is done between the header pins and the sensor components. Solder all the pins from the top. Be careful as to not damage the sensor components.
+
+<div style="text-align: center;"><img src="../../public/soldersensor.jpg" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+
+## 3. Pins and Board Soldering
+
+This soldering is done between the sensor and the board. 
+
+#### a) Firstly, place any **ONE** of the sensors.
+ 
+<div style="text-align: center;"><img src="../../public/step1.png" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+
+
+::: tip
+Work on one sensor at a time.
+:::
+
+#### b) Flip the board. 
+
+<i> The soldering is done at the back of the EPS Board.</i>
+
+<div style="text-align: center;"><img src="../../public/step1.5.png" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+<div style="text-align: center;"><img src="../../public/solderboard.jpg" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+
+Repeat step 2 and 3 for all the sensors.
+
+
+## 4. Deployement switch soldering
+
+The third component that we need to solder is the deployement switch. The finished soldering looks something like this.
+
+<div style="text-align: center;"><img src="../../public/s_depswitch.jpg" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+
+### Step 1 : Header pin unpacking and breaking
+
+Inside your MPU6050 packet, you should receive two header pins. One of them is straight. The other one is bent to 90 degrees.
+
+<div style="text-align: center;"><img src="../../public/s_1.jpg" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+
+The straight one goes to the sensor board as shown.
+
+<div style="text-align: center;"><img src="../../public/s_2.jpg" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+
+Break off the third header pin such that only 3 pins are remaining. You can do it using hands or any tool of your convinience.
+
+<div style="text-align: center;"><img src="../../public/s_3.jpg" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+
+### Step 2 : Header pin placement
+
+Place the header pin in the back of OBC board as shown.
+
+
+<div style="text-align: center;"><img src="../../public/s_4.jpg" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+
+### Step 3 : Soldering
+
+Solder all the 3 pins of the header pin from the front side of OBC board.
+
+<div style="text-align: center;"><img src="../../public/s_5.jpg" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+
+### Step 4: Wire Soldering
+
+The header pins are soldered to wires, which are then soldered to the deployement switch. The wires are connected to the header pin from the back side of OBC board.
+
+Refer to the image below for convinience.
+
+<div style="text-align: center;"><img src="../../public/s_6.jpg" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+
+::: danger !! CAUTION !!
+
+Make sure the labelings in OBC board beside the header pin match the corresponsing labeling in the deployement switch.
+:::
+
+<div style="text-align: center;"><img src="../../public/s_7.jpg" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+<div style="text-align: center;"><img src="../../public/s_8.jpg" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+
+### Your deployement switch should look something like this
+
+<div style="text-align: center;"><img src="../../public/s_depswitch.jpg" title="ECube render" style="max-width: 80%; height: auto; width: 600px; margin-top: 20px;" /></div>
+
+The soldering portion is Complete😊! Head over to [Assembly Steps](/en/assembly/assembly_steps.md) for further steps!
 
 [Back to Home](./index.md)

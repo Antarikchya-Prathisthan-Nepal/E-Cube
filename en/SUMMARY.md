@@ -2,11 +2,11 @@
 
 - [Assembly](assembly/index.md)
 
-  - [Assembly Steps](assembly/assembly_steps.md)
-
-  - [Soldering](assembly/soldering.md)
-
   - [List of Components](assembly/list_of_components.md)
+
+  - [Step 0: Soldering](assembly/soldering.md)
+
+  - [Assembly Steps](assembly/assembly_steps.md)
 
 - [Operation Guide](operationguide/index.md)
 

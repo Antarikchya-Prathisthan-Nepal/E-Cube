@@ -7,13 +7,13 @@ This website covers **all aspects of amateur radio**, from its rich history to t
 ## This section contains 
 
 ###  **[History of Amateur Radio](/en/amateurradio/history.md)**  
-Discover how amateur radio began, from its early experiments in the 19th century to its critical role in **World Wars, space communication, and modern technology**.  
+<i> Discover how amateur radio began, from its early experiments in the 19th century to its critical role in **World Wars, space communication, and modern technology**.</i> 
 
 ###  **[Getting Licensed](/en/amateurradio/license.md)**  
-Learn about the different **license classes, their privileges, and how to get started** as a ham radio operator. This section includes study resources, exam details, and international licensing information.  
+<i> Learn about the different **license classes, their privileges, and how to get started** as a ham radio operator. This section includes study resources, exam details, and international licensing information.</i> 
 
 ###  **[Why Amateur Radio?](/en/amateurradio/whyamr.md)**  
-Explore the **benefits of amateur radio**, including global communication, emergency preparedness, technical experimentation, and a thriving worldwide community.  
+<i> Explore the **benefits of amateur radio**, including global communication, emergency preparedness, technical experimentation, and a thriving worldwide community.</i> 
 
 ---
 
